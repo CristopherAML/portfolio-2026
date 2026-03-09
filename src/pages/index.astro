@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <html lang="es">
@@ -8,359 +8,639 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width" />
     <title>Cristopher Meza | System Boot</title>
   </head>
-  
-  <body class="bg-black text-green-500 font-mono min-h-screen flex flex-col overflow-x-hidden selection:bg-green-900 selection:text-green-100">
-	<div class="crt-overlay"></div>
 
-    <div id="terminal-container" class="h-screen w-full flex flex-col p-6 transition-opacity duration-700 ease-in-out">
-      <div id="terminal-screen" class="flex flex-col gap-2 text-sm md:text-base"></div>
-      <p id="cursor" class="animate-pulse mt-2 text-green-500 text-lg font-bold">_</p>
+  <body
+    class="bg-black text-green-500 font-mono min-h-screen flex flex-col overflow-x-hidden selection:bg-green-900 selection:text-green-100"
+  >
+    <div class="crt-overlay"></div>
+
+    <div
+      id="terminal-container"
+      class="h-screen w-full flex flex-col p-6 transition-opacity duration-700 ease-in-out"
+    >
+      <div
+        id="terminal-screen"
+        class="flex flex-col gap-2 text-sm md:text-base"
+      >
+      </div>
+      <p
+        id="cursor"
+        class="animate-pulse mt-2 text-green-500 text-lg font-bold"
+      >
+        _
+      </p>
     </div>
 
-	<div class="relative w-full bg-green-500/5 border-y border-green-500/20 py-2 overflow-hidden whitespace-nowrap mt-12">
-		<div class="inline-block animate-marquee font-mono text-[10px] md:text-xs text-green-500/60 tracking-[0.2em] uppercase">
-			<span>
-			> RENDIMIENTO POLARS: +400% vs PANDAS &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> REGISTROS PROCESADOS: +2.5M &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> STATUS: SYSTEM_OPTIMIZED &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> ARCHITECTURE: DISTRIBUTED &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> COMPLIANCE: SONIC_SCIENTIST_ACTIVE &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> LOCATION: CDMX_NODE &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp;
-			</span>
-			<span>	
-			> RENDIMIENTO POLARS: +400% vs PANDAS &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> REGISTROS PROCESADOS: +2.5M &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> STATUS: SYSTEM_OPTIMIZED &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> ARCHITECTURE: DISTRIBUTED &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> COMPLIANCE: SONIC_SCIENTIST_ACTIVE &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; 
-			> LOCATION: CDMX_NODE &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp;
-			</span>
-		</div>
-	</div>
+    <div
+      id="portfolio-container"
+      class="hidden min-h-screen w-full p-8 md:p-16 text-gray-300 opacity-0 transition-opacity duration-1000 ease-in-out max-w-6xl mx-auto"
+    >
+      <div class="flex justify-end w-full mb-4">
+        <button
+          id="lang-switch"
+          class="font-mono border border-green-500/50 px-3 py-1 text-[10px] md:text-xs text-green-500 hover:bg-green-500 hover:text-black transition-all shadow-[0_0_10px_rgba(34,197,94,0.1)]"
+        >
+          [ SWITCH_LANG: EN ]
+        </button>
+      </div>
 
-    <div id="portfolio-container" class="hidden min-h-screen w-full p-8 md:p-16 text-gray-300 opacity-0 transition-opacity duration-1000 ease-in-out max-w-6xl mx-auto">
-      
       <header class="mb-20 mt-10 animate-fade-in-up">
-        <p class="text-green-500 mb-4">///// DATA_PIPELINES: ACTIVE // SYS_READY</p>
-        <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight glitch-hover transition-colors duration-200 cursor-default">
+        <p class="text-green-500 mb-4">
+          ///// DATA_PIPELINES: ACTIVE // SYS_READY
+        </p>
+        <h1
+          class="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight glitch-hover transition-colors duration-200 cursor-default"
+        >
           Cristopher <span class="text-green-500">Meza</span>
         </h1>
-        <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-400">Full-Stack Developer & Data Engineer</h2>
-        <p class="max-w-3xl text-lg text-gray-400 leading-relaxed">
-			Ingeniero especializado en el desarrollo de <span class="text-green-500">sistemas integrales</span>, 
-			desde arquitecturas backend de alto rendimiento hasta interfaces dinámicas y funcionales. 
-			Experto en optimización de datos y en la creación de herramientas de gestión, integrando flujos de asistencia y despliegues 
-			robustos en Linux con un enfoque en la seguridad y la experiencia del usuario.
-		</p>
+        <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-400">
+          Full-Stack Developer & Data Engineer
+        </h2>
+        <p
+          data-i18n="heroText"
+          class="max-w-3xl text-lg text-gray-400 leading-relaxed"
+        >
+          Ingeniero especializado en el desarrollo de <span
+            class="text-green-500">sistemas integrales</span
+          >, desde arquitecturas backend de alto rendimiento hasta interfaces
+          dinámicas y funcionales. Experto en optimización de datos y en la
+          creación de herramientas de gestión, integrando flujos de asistencia y
+          despliegues robustos en Linux con un enfoque en la seguridad y la
+          experiencia del usuario.
+        </p>
 
-		<a 
-          href="/cv_cristopher_meza.pdf" 
-          download 
+        <a
+          href="/cv_cristopher_meza.pdf"
+          download
           class="mt-8 inline-flex items-center gap-2 border border-green-500 bg-green-500/10 px-6 py-3 hover:bg-green-500 hover:text-black transition-all duration-300 font-mono text-sm tracking-widest uppercase shadow-[0_0_10px_rgba(74,222,128,0.2)] hover:shadow-[0_0_20px_rgba(74,222,128,0.5)]"
         >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+            ></path>
           </svg>
-          [ EXTRAER_REGISTRO_CV.pdf ]
+          <span data-i18n="cvBtn">[ EXTRAER_REGISTRO_CV.pdf ]</span>
         </a>
-
       </header>
 
+      <div
+        class="relative w-full bg-green-500/5 border-y border-green-500/20 py-2 overflow-hidden whitespace-nowrap mb-16"
+      >
+        <div
+          class="inline-block animate-marquee font-mono text-[10px] md:text-xs text-green-500/60 tracking-[0.2em] uppercase"
+        >
+          <span data-i18n="ticker"
+            >RENDIMIENTO POLARS: +400% vs PANDAS &nbsp;&nbsp;&nbsp; //
+            &nbsp;&nbsp;&nbsp; > REGISTROS PROCESADOS: +2.5M &nbsp;&nbsp;&nbsp;
+            // &nbsp;&nbsp;&nbsp; > STATUS: SYSTEM_OPTIMIZED &nbsp;&nbsp;&nbsp;
+            // &nbsp;&nbsp;&nbsp; > ARCHITECTURE: DISTRIBUTED &nbsp;&nbsp;&nbsp;
+            // &nbsp;&nbsp;&nbsp; > COMPLIANCE: SONIC_SCIENTIST_ACTIVE
+            &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; > LOCATION: CDMX_NODE
+            &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+      </div>
       <section>
-        <h3 class="text-2xl font-bold text-white mb-8 border-b border-green-500/30 pb-4 inline-block pr-10 glitch-hover transition-colors duration-200 cursor-default">
-			> módulos_desplegados
-		</h3>
-        
+        <h3
+          data-i18n="modulesTitle"
+          class="text-2xl font-bold text-white mb-8 border-b border-green-500/30 pb-4 inline-block pr-10 glitch-hover transition-colors duration-200 cursor-default"
+        >
+          > módulos_desplegados
+        </h3>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <div class="relative border border-green-500/20 bg-gray-900 overflow-hidden hover:border-green-500 transition-all duration-300 group p-6">
-  
-		<div class="absolute inset-0 bg-[url('/circuitos.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay group-hover:opacity-25 transition-opacity duration-500"></div>
-			<div class="relative z-10">
-				<h4 class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300 transition-colors">Sonic Scientist</h4>
-				<p class="text-sm text-gray-400 mb-6 line-clamp-3">
-				Herramienta de cumplimiento normativo y auditoría. Desarrollo enfocado en la validación estructurada de datos y la aplicación estricta de filtros regulatorios.
-				</p>
-				<div class="flex flex-wrap gap-2 text-xs font-mono text-green-600/80">
-				<span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Python</span>
-				<span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Polars</span>
-				<span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Data Validation</span>
-				</div>
-			</div>
-		</div>
-
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 hover:border-green-500 hover:bg-green-900/10 transition-all duration-300 group">
-            <h4 class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300">DocHub</h4>
-            <p class="text-sm text-gray-400 mb-6 line-clamp-3">
-              Sistema integral de gestión de archivos. Arquitectura diseñada para el despliegue seguro en servidores, optimizando el flujo de trabajo y repositorios.
-            </p>
-            <div class="flex flex-wrap gap-2 text-xs font-mono text-green-600/80">
-              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Linux</span>
-              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Backend Arch</span>
-              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Server Deploy</span>
+          <div
+            class="relative border border-green-500/20 bg-gray-900 overflow-hidden hover:border-green-500 transition-all duration-300 group p-6"
+          >
+            <div
+              class="absolute inset-0 bg-[url('/circuitos.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay group-hover:opacity-25 transition-opacity duration-500"
+            >
+            </div>
+            <div class="relative z-10">
+              <h4
+                class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300 transition-colors"
+              >
+                Sonic Scientist
+              </h4>
+              <p
+                data-i18n="sonicDesc"
+                class="text-sm text-gray-400 mb-6 line-clamp-3"
+              >
+                Herramienta de cumplimiento normativo y auditoría. Desarrollo
+                enfocado en la validación estructurada de datos y la aplicación
+                estricta de filtros regulatorios.
+              </p>
+              <div
+                class="flex flex-wrap gap-2 text-xs font-mono text-green-600/80"
+              >
+                <span
+                  class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                  >Python</span
+                >
+                <span
+                  class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                  >Polars</span
+                >
+                <span
+                  class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                  >Data Validation</span
+                >
+              </div>
             </div>
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 hover:border-green-500 hover:bg-green-900/10 transition-all duration-300 group">
-            <h4 class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300">Dead Man's Switch</h4>
-            <p class="text-sm text-gray-400 mb-6 line-clamp-3">
-              Script de seguridad automatizado a nivel de sistema operativo para proteger y gestionar información crítica en caso de ausencias prolongadas.
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 hover:border-green-500 hover:bg-green-900/10 transition-all duration-300 group"
+          >
+            <h4
+              class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300"
+            >
+              DocHub
+            </h4>
+            <p
+              data-i18n="dochubDesc"
+              class="text-sm text-gray-400 mb-6 line-clamp-3"
+            >
+              Sistema integral de gestión de archivos. Arquitectura diseñada
+              para el despliegue seguro en servidores, optimizando el flujo de
+              trabajo y repositorios.
             </p>
-            <div class="flex flex-wrap gap-2 text-xs font-mono text-green-600/80">
-              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Bash</span>
-              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Cybersecurity</span>
-              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20">Automation</span>
+            <div
+              class="flex flex-wrap gap-2 text-xs font-mono text-green-600/80"
+            >
+              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                >Linux</span
+              >
+              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                >Backend Arch</span
+              >
+              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                >Server Deploy</span
+              >
             </div>
           </div>
 
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 hover:border-green-500 hover:bg-green-900/10 transition-all duration-300 group"
+          >
+            <h4
+              class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300"
+            >
+              Dead Man's Switch
+            </h4>
+            <h3
+              data-i18n="deadmanDesc"
+              class="text-sm text-gray-400 mb-6 line-clamp-3"
+            >
+              Script de seguridad automatizado a nivel de sistema operativo para
+              proteger y gestionar información crítica en caso de ausencias
+              prolongadas.
+            </h3>
+            <div
+              class="flex flex-wrap gap-2 text-xs font-mono text-green-600/80"
+            >
+              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                >Bash</span
+              >
+              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                >Cybersecurity</span
+              >
+              <span class="bg-green-500/10 px-2 py-1 border border-green-500/20"
+                >Automation</span
+              >
+            </div>
+          </div>
         </div>
       </section>
 
-	  <section class="mt-20">
-        <h3 class="text-2xl font-bold text-white mb-8 border-b border-green-500/30 pb-4 inline-block pr-10 glitch-hover transition-colors duration-200 cursor-default">
+      <section class="mt-20">
+        <h3
+          data-i18n="arsenalTitle"
+          class="text-2xl font-bold text-white mb-8 border-b border-green-500/30 pb-4 inline-block pr-10 glitch-hover transition-colors duration-200 cursor-default"
+        >
           > arsenal_técnico
         </h3>
-        
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="16 16 32 32"><path d="M31.885 16c-8.124 0-7.617 3.523-7.617 3.523l.01 3.65h7.752v1.095H21.197S16 23.678 16 31.876c0 8.196 4.537 7.906 4.537 7.906h2.708v-3.804s-.146-4.537 4.465-4.537h7.688s4.32.07 4.32-4.175v-7.019S40.374 16 31.885 16zm-4.275 2.454a1.394 1.394 0 1 1 0 2.79 1.393 1.393 0 0 1-1.395-1.395c0-.771.624-1.395 1.395-1.395z"/><path d="M32.115 47.833c8.124 0 7.617-3.523 7.617-3.523l-.01-3.65H31.97v-1.095h10.832S48 40.155 48 31.958c0-8.197-4.537-7.906-4.537-7.906h-2.708v3.803s.146 4.537-4.465 4.537h-7.688s-4.32-.07-4.32 4.175v7.019s-.656 4.247 7.833 4.247zm4.275-2.454a1.393 1.393 0 0 1-1.395-1.395 1.394 1.394 0 1 1 1.395 1.395z"/></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">Python</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="16 16 32 32"
+              ><path
+                d="M31.885 16c-8.124 0-7.617 3.523-7.617 3.523l.01 3.65h7.752v1.095H21.197S16 23.678 16 31.876c0 8.196 4.537 7.906 4.537 7.906h2.708v-3.804s-.146-4.537 4.465-4.537h7.688s4.32.07 4.32-4.175v-7.019S40.374 16 31.885 16zm-4.275 2.454a1.394 1.394 0 1 1 0 2.79 1.393 1.393 0 0 1-1.395-1.395c0-.771.624-1.395 1.395-1.395z"
+              ></path><path
+                d="M32.115 47.833c8.124 0 7.617-3.523 7.617-3.523l-.01-3.65H31.97v-1.095h10.832S48 40.155 48 31.958c0-8.197-4.537-7.906-4.537-7.906h-2.708v3.803s.146 4.537-4.465 4.537h-7.688s-4.32-.07-4.32 4.175v7.019s-.656 4.247 7.833 4.247zm4.275-2.454a1.393 1.393 0 0 1-1.395-1.395 1.394 1.394 0 1 1 1.395 1.395z"
+              ></path></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >Python</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 256 292"><path d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"/><path d="M249.485 67.8 134.65 1.833c-1.086-.542-2.443-1.085-3.529-1.357L2.443 220.912c1.086 1.357 2.444 2.443 3.8 3.258l114.834 65.968c3.258 1.9 7.059 2.443 10.588 1.357L252.47 70.515c-.815-1.086-1.9-1.9-2.986-2.714Z"/><path d="M249.756 223.898c3.258-1.9 5.701-5.158 6.787-8.687L130.579.204c-3.258-.543-6.787-.272-9.773 1.628L6.786 67.53l122.979 224.238c1.628-.272 3.529-.815 5.158-1.63l114.833-66.239Z"/></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">Node.js</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 256 292"
+              ><path
+                d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"
+              ></path><path
+                d="M249.485 67.8 134.65 1.833c-1.086-.542-2.443-1.085-3.529-1.357L2.443 220.912c1.086 1.357 2.444 2.443 3.8 3.258l114.834 65.968c3.258 1.9 7.059 2.443 10.588 1.357L252.47 70.515c-.815-1.086-1.9-1.9-2.986-2.714Z"
+              ></path><path
+                d="M249.756 223.898c3.258-1.9 5.701-5.158 6.787-8.687L130.579.204c-3.258-.543-6.787-.272-9.773 1.628L6.786 67.53l122.979 224.238c1.628-.272 3.529-.815 5.158-1.63l114.833-66.239Z"
+              ></path></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >Node.js</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 256 256"><path d="M128 0C57.33 0 0 57.33 0 128s57.33 128 128 128 128-57.33 128-128S198.67 0 128 0Zm-6.67 230.605v-80.288H76.699l64.128-124.922v80.288h42.966L121.33 230.605Z"/></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">FastAPI</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+              ><path
+                d="M128 0C57.33 0 0 57.33 0 128s57.33 128 128 128 128-57.33 128-128S198.67 0 128 0Zm-6.67 230.605v-80.288H76.699l64.128-124.922v80.288h42.966L121.33 230.605Z"
+              ></path></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >FastAPI</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 432.071 445.383"><path d="M323.205 324.227c2.833-23.601 1.984-27.062 19.563-23.239l4.463.392c13.517.615 31.199-2.174 41.587-7 22.362-10.376 35.622-27.7 13.572-23.148-50.297 10.376-53.755-6.655-53.755-6.655 53.111-78.803 75.313-178.836 56.149-203.322-52.27-66.789-142.748-35.206-144.262-34.386l-.482.089c-9.938-2.062-21.06-3.294-33.554-3.496-22.761-.374-40.032 5.967-53.133 15.904 0 0-161.408-66.498-153.899 83.628 1.597 31.936 45.777 241.655 98.47 178.31 19.259-23.163 37.871-42.748 37.871-42.748 9.242 6.14 20.307 9.272 31.912 8.147l.897-.765c-.281 2.876-.157 5.689.359 9.019-13.572 15.167-9.584 17.83-36.723 23.416-27.457 5.659-11.326 15.734-.797 18.367 12.768 3.193 42.305 7.716 62.268-20.224l-.795 3.188c5.325 4.26 4.965 30.619 5.72 49.452.756 18.834 2.017 36.409 5.856 46.771 3.839 10.36 8.369 37.05 44.036 29.406 29.809-6.388 52.6-15.582 54.677-101.107"/><path d="M402.395 271.23c-50.302 10.376-53.76-6.655-53.76-6.655 53.111-78.808 75.313-178.843 56.153-203.326-52.27-66.785-142.752-35.2-144.262-34.38l-.486.087c-9.938-2.063-21.06-3.292-33.56-3.496-22.761-.373-40.026 5.967-53.127 15.902 0 0-161.411-66.495-153.904 83.63 1.597 31.938 45.776 241.657 98.471 178.312 19.26-23.163 37.869-42.748 37.869-42.748 9.243 6.14 20.308 9.272 31.908 8.147l.901-.765c-.28 2.876-.152 5.689.361 9.019-13.575 15.167-9.586 17.83-36.723 23.416-27.459 5.659-11.328 15.734-.796 18.367 12.768 3.193 42.307 7.716 62.266-20.224l-.796 3.188c5.319 4.26 9.054 27.711 8.428 48.969-.626 21.259-1.044 35.854 3.147 47.254 4.191 11.4 8.368 37.05 44.042 29.406 29.809-6.388 45.256-22.942 47.405-50.555 1.525-19.631 4.976-16.729 5.194-34.28l2.768-8.309c3.192-26.611.507-35.196 18.872-31.203l4.463.392c13.517.615 31.208-2.174 41.591-7 22.358-10.376 35.618-27.7 13.573-23.148z"/><path d="M215.866 286.484c-1.385 49.516.348 99.377 5.193 111.495 4.848 12.118 15.223 35.688 50.9 28.045 29.806-6.39 40.651-18.756 45.357-46.051 3.466-20.082 10.148-75.854 11.005-87.281M173.104 38.256S11.583-27.76 19.092 122.365c1.597 31.938 45.779 241.664 98.473 178.316 19.256-23.166 36.671-41.335 36.671-41.335M260.349 26.207c-5.591 1.753 89.848-34.889 144.087 34.417 19.159 24.484-3.043 124.519-56.153 203.329"/><path d="M348.282 263.953s3.461 17.036 53.764 6.653c22.04-4.552 8.776 12.774-13.577 23.155-18.345 8.514-59.474 10.696-60.146-1.069-1.729-30.355 21.647-21.133 19.96-28.739-1.525-6.85-11.979-13.573-18.894-30.338-6.037-14.633-82.796-126.849 21.287-110.183 3.813-.789-27.146-99.002-124.553-100.599-97.385-1.597-94.19 119.762-94.19 119.762"/><path d="M188.604 274.334c-13.577 15.166-9.584 17.829-36.723 23.417-27.459 5.66-11.326 15.733-.797 18.365 12.768 3.195 42.307 7.718 62.266-20.229 6.078-8.509-.036-22.086-8.385-25.547-4.034-1.671-9.428-3.765-16.361 3.994z"/><path d="M187.715 274.069c-1.368-8.917 2.93-19.528 7.536-31.942 6.922-18.626 22.893-37.255 10.117-96.339-9.523-44.029-73.396-9.163-73.436-3.193-.039 5.968 2.889 30.26-1.067 58.548-5.162 36.913 23.488 68.132 56.479 64.938"/><path d="M172.517 141.7c-.288 2.039 3.733 7.48 8.976 8.207 5.234.73 9.714-3.522 9.998-5.559.284-2.039-3.732-4.285-8.977-5.015-5.237-.731-9.719.333-9.996 2.367z"/><path d="M331.941 137.543c.284 2.039-3.732 7.48-8.976 8.207-5.238.73-9.718-3.522-10.005-5.559-.277-2.039 3.74-4.285 8.979-5.015 5.239-.73 9.718.333 10.002 2.368z"/><path d="M350.676 123.432c.863 15.994-3.445 26.888-3.988 43.914-.804 24.748 11.799 53.074-7.191 81.435"/></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">PostgreSQL</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 432.071 445.383"
+              ><path
+                d="M323.205 324.227c2.833-23.601 1.984-27.062 19.563-23.239l4.463.392c13.517.615 31.199-2.174 41.587-7 22.362-10.376 35.622-27.7 13.572-23.148-50.297 10.376-53.755-6.655-53.755-6.655 53.111-78.803 75.313-178.836 56.149-203.322-52.27-66.789-142.748-35.206-144.262-34.386l-.482.089c-9.938-2.062-21.06-3.294-33.554-3.496-22.761-.374-40.032 5.967-53.133 15.904 0 0-161.408-66.498-153.899 83.628 1.597 31.936 45.777 241.655 98.47 178.31 19.259-23.163 37.871-42.748 37.871-42.748 9.242 6.14 20.307 9.272 31.912 8.147l.897-.765c-.281 2.876-.157 5.689.359 9.019-13.572 15.167-9.584 17.83-36.723 23.416-27.457 5.659-11.326 15.734-.797 18.367 12.768 3.193 42.305 7.716 62.268-20.224l-.795 3.188c5.325 4.26 4.965 30.619 5.72 49.452.756 18.834 2.017 36.409 5.856 46.771 3.839 10.36 8.369 37.05 44.036 29.406 29.809-6.388 52.6-15.582 54.677-101.107"
+              ></path><path
+                d="M402.395 271.23c-50.302 10.376-53.76-6.655-53.76-6.655 53.111-78.808 75.313-178.843 56.153-203.326-52.27-66.785-142.752-35.2-144.262-34.38l-.486.087c-9.938-2.063-21.06-3.292-33.56-3.496-22.761-.373-40.026 5.967-53.127 15.902 0 0-161.411-66.495-153.904 83.63 1.597 31.938 45.776 241.657 98.471 178.312 19.26-23.163 37.869-42.748 37.869-42.748 9.243 6.14 20.308 9.272 31.908 8.147l.901-.765c-.28 2.876-.152 5.689.361 9.019-13.575 15.167-9.586 17.83-36.723 23.416-27.459 5.659-11.328 15.734-.796 18.367 12.768 3.193 42.307 7.716 62.266-20.224l-.796 3.188c5.319 4.26 9.054 27.711 8.428 48.969-.626 21.259-1.044 35.854 3.147 47.254 4.191 11.4 8.368 37.05 44.042 29.406 29.809-6.388 45.256-22.942 47.405-50.555 1.525-19.631 4.976-16.729 5.194-34.28l2.768-8.309c3.192-26.611.507-35.196 18.872-31.203l4.463.392c13.517.615 31.208-2.174 41.591-7 22.358-10.376 35.618-27.7 13.573-23.148z"
+              ></path><path
+                d="M215.866 286.484c-1.385 49.516.348 99.377 5.193 111.495 4.848 12.118 15.223 35.688 50.9 28.045 29.806-6.39 40.651-18.756 45.357-46.051 3.466-20.082 10.148-75.854 11.005-87.281M173.104 38.256S11.583-27.76 19.092 122.365c1.597 31.938 45.779 241.664 98.473 178.316 19.256-23.166 36.671-41.335 36.671-41.335M260.349 26.207c-5.591 1.753 89.848-34.889 144.087 34.417 19.159 24.484-3.043 124.519-56.153 203.329"
+              ></path><path
+                d="M348.282 263.953s3.461 17.036 53.764 6.653c22.04-4.552 8.776 12.774-13.577 23.155-18.345 8.514-59.474 10.696-60.146-1.069-1.729-30.355 21.647-21.133 19.96-28.739-1.525-6.85-11.979-13.573-18.894-30.338-6.037-14.633-82.796-126.849 21.287-110.183 3.813-.789-27.146-99.002-124.553-100.599-97.385-1.597-94.19 119.762-94.19 119.762"
+              ></path><path
+                d="M188.604 274.334c-13.577 15.166-9.584 17.829-36.723 23.417-27.459 5.66-11.326 15.733-.797 18.365 12.768 3.195 42.307 7.718 62.266-20.229 6.078-8.509-.036-22.086-8.385-25.547-4.034-1.671-9.428-3.765-16.361 3.994z"
+              ></path><path
+                d="M187.715 274.069c-1.368-8.917 2.93-19.528 7.536-31.942 6.922-18.626 22.893-37.255 10.117-96.339-9.523-44.029-73.396-9.163-73.436-3.193-.039 5.968 2.889 30.26-1.067 58.548-5.162 36.913 23.488 68.132 56.479 64.938"
+              ></path><path
+                d="M172.517 141.7c-.288 2.039 3.733 7.48 8.976 8.207 5.234.73 9.714-3.522 9.998-5.559.284-2.039-3.732-4.285-8.977-5.015-5.237-.731-9.719.333-9.996 2.367z"
+              ></path><path
+                d="M331.941 137.543c.284 2.039-3.732 7.48-8.976 8.207-5.238.73-9.718-3.522-10.005-5.559-.277-2.039 3.74-4.285 8.979-5.015 5.239-.73 9.718.333 10.002 2.368z"
+              ></path><path
+                d="M350.676 123.432c.863 15.994-3.445 26.888-3.988 43.914-.804 24.748 11.799 53.074-7.191 81.435"
+              ></path></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >PostgreSQL</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 512 228"><path d="M194.5 112c-6.8 0-12.3 2-16.6 6.1-4.3 4-6.4 9.3-6.4 15.8a23.3 23.3 0 0 0 6.5 17c2.2 2.4 6.6 5.6 13.2 9.7 8 5 13.4 9 16 12 2.5 3.2 3.7 6.4 3.7 9.9 0 4.5-1.5 8.2-4.6 11a18 18 0 0 1-12.4 4 20.1 20.1 0 0 1-20.3-20.8h-2.5v22.9h2.5c.8-2.2 1.8-3.3 3.2-3.3.7 0 2.3.4 4.7 1.3 6 2.1 10.9 3.2 14.7 3.2a23 23 0 0 0 17-7 23.2 23.2 0 0 0 2.4-30.8c-3-4-9-8.6-18-14a59.5 59.5 0 0 1-15-11.3c-2.3-3-3.5-6.1-3.5-9.7 0-3.8 1.5-7 4.2-9.2 2.8-2.3 6.5-3.5 11-3.5 5.2 0 9.5 1.5 12.9 4.6 3.3 3 5.3 7.4 5.9 12.8h2.5V113h-2.3a6 6 0 0 1-.8 2c-.3.3-.7.4-1.4.4a17 17 0 0 1-4.3-1 38.6 38.6 0 0 0-12.3-2.3Zm82.4 0a44.6 44.6 0 0 0-39 22.2 43.5 43.5 0 0 0 4.5 50.2c7 8.2 15.3 13.3 25 15.3 2.1 1.1 5.3 4.1 9.4 9 4.7 5.3 8.6 9.3 11.9 11.6A35.6 35.6 0 0 0 311 227c5.3 0 10-.9 14-2.7l-.9-2.3a20.1 20.1 0 0 1-18.7-2.3c-3.6-2.5-8.3-7.1-13.8-14a47.6 47.6 0 0 0-5.4-6.1c10.6-2 19.3-7.2 26-15.4a42.8 42.8 0 0 0 10.2-28 42 42 0 0 0-13.2-31.4 44.8 44.8 0 0 0-32.4-12.9Zm51.4 0 .1 2.7c5.5 0 8.6 1.7 9.3 5 .3 1.1.4 3.3.4 6.4v59.6c0 4.5-.7 7.3-2 8.6-1.1 1.2-3.2 2-6.2 2.3l-.1 2.6h55.1l1.4-13.5h-2.5c-.7 3.7-2.3 6.3-5 7.8a30.5 30.5 0 0 1-14 2.3h-5.2c-6 0-9.5-2.2-10.5-6.6-.2-.9-.2-1.8-.2-2.8l.2-60.3c0-4.4.5-7.4 1.7-8.9 1.2-1.4 3.3-2.3 6.4-2.5l-.2-2.7h-28.7Zm-50.6 3.3a28 28 0 0 1 23 11.2 48 48 0 0 1 8.8 30.5c0 12.3-3 22.1-8.9 29.5a29 29 0 0 1-23.7 11c-9.5 0-17.2-3.8-23-11.4a47.1 47.1 0 0 1-8.9-29.6c0-12.5 3-22.5 9-30 5.9-7.5 13.8-11.2 23.7-11.2Zm126.9 12.8c-1.3 0-2.4.5-3.1 1.4-.8 1-1 2-.8 3.4a6 6 0 0 0 2.2 3.4c1.1 1 2.4 1.4 3.7 1.4 1.3 0 2.3-.5 3-1.4.7-1 1-2.1.7-3.4-.3-1.4-1-2.5-2-3.4a5.6 5.6 0 0 0-3.7-1.4Zm36.4 9.2c-2.3 8.8-7.3 13.5-14.9 14.3l.1 2.5h8.9l-.2 29.8c0 5.1.2 8.5.5 10.2 1 4.2 3.6 6.3 8.1 6.3 6.6 0 13.4-4 20.6-12l-2.2-1.8c-5.2 5.2-9.7 7.8-13.7 7.8-2.5 0-4-1.4-4.6-4.2l-.2-2.4v-33.7h13.7l-.2-4h-13.4v-12.8H441Zm52.4 11.2c-7.6 0-13.7 3.7-18.5 11a31.3 31.3 0 0 0-4.4 24.4 21 21 0 0 0 6.7 12.2 19 19 0 0 0 12.7 4.3c4.7 0 11.4-1.2 14.1-3.7 2.8-2.4 5.4-6.3 7.8-11.7l-2-2a20.6 20.6 0 0 1-17.1 10.5c-8 0-12.8-4.3-14.6-13l-.5-3.5a46 46 0 0 0 21.4-8c4.8-3.8 9.6-7.9 8.7-12.1a9.9 9.9 0 0 0-3.9-6c-2-1.6-7.4-2.4-10.4-2.4Zm-83 .3-16.3 3.8v2.9l5.7-.7c2.7 0 4.3 1.2 4.8 3.7.2.8.3 2 .4 3.4l-.2 26.8c0 3.7-.5 5.8-1.3 6.5-.8.6-3 1-6.6 1v2.5h25.9v-2.5c-3.7 0-6-.3-7-.9-1-.5-1.8-1.5-2.1-3-.2-1.2-.3-3.1-.4-5.7l.1-37.8h-3Zm78.9 5c1.6 0 3 .6 4.6 1.8a7 7 0 0 1 2.8 4c1.4 7-4.9 12-19 14.7a25 25 0 0 1 2.7-14.1c2.3-4.3 5.3-6.4 8.9-6.4Z"/><path d="M157.9 10H17C7.7 10 0 17.7 0 27v155.2c0 9.4 7.7 17.2 17.1 17.2h92.7c-1-46.2 14.7-135.7 48-189.5Z"/><path d="M152.8 15H17C10.5 15 5 20.4 5 27V171c30.7-11.8 76.8-22 108.7-21.5a989.7 989.7 0 0 1 39-134.5Z"/><path d="M190.7 4.9c-9.6-8.6-21.3-5.2-32.8 5a81.4 81.4 0 0 0-5.1 5c-19.7 21-38 59.7-43.7 89.2a81.5 81.5 0 0 1 5.8 17.7l.8 3.5-.9-2.8a173.8 173.8 0 0 0-.8-2 172 172 0 0 0-6.4-12.1l-3.5 11c4.5 8.2 7.3 22.4 7.3 22.4l-1.4-4.1c-1-2.9-6-11.7-7.2-13.7-2 7.5-2.8 12.6-2.1 13.8 1.4 2.4 2.7 6.5 4 11a257.6 257.6 0 0 1 4.6 25c-.3 8.6-.1 17.6.5 25.7a91 91 0 0 0 4.7 24.8l1.5-.8a111 111 0 0 1-3.9-37c.9-22.5 6-49.5 15.6-77.7 16-42.5 38.4-76.6 58.8-93-18.6 17-43.8 71.4-51.4 91.6a365.7 365.7 0 0 0-18 64c6.2-19 26.4-27.2 26.4-27.2s9.8-12.2 21.4-29.6a210 210 0 0 0-22.1 6l-7.1 3s18.1-11 33.7-16C191 73.8 214.2 25.9 190.7 4.9"/></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">SQLite / SQL</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 512 228"
+              ><path
+                d="M194.5 112c-6.8 0-12.3 2-16.6 6.1-4.3 4-6.4 9.3-6.4 15.8a23.3 23.3 0 0 0 6.5 17c2.2 2.4 6.6 5.6 13.2 9.7 8 5 13.4 9 16 12 2.5 3.2 3.7 6.4 3.7 9.9 0 4.5-1.5 8.2-4.6 11a18 18 0 0 1-12.4 4 20.1 20.1 0 0 1-20.3-20.8h-2.5v22.9h2.5c.8-2.2 1.8-3.3 3.2-3.3.7 0 2.3.4 4.7 1.3 6 2.1 10.9 3.2 14.7 3.2a23 23 0 0 0 17-7 23.2 23.2 0 0 0 2.4-30.8c-3-4-9-8.6-18-14a59.5 59.5 0 0 1-15-11.3c-2.3-3-3.5-6.1-3.5-9.7 0-3.8 1.5-7 4.2-9.2 2.8-2.3 6.5-3.5 11-3.5 5.2 0 9.5 1.5 12.9 4.6 3.3 3 5.3 7.4 5.9 12.8h2.5V113h-2.3a6 6 0 0 1-.8 2c-.3.3-.7.4-1.4.4a17 17 0 0 1-4.3-1 38.6 38.6 0 0 0-12.3-2.3Zm82.4 0a44.6 44.6 0 0 0-39 22.2 43.5 43.5 0 0 0 4.5 50.2c7 8.2 15.3 13.3 25 15.3 2.1 1.1 5.3 4.1 9.4 9 4.7 5.3 8.6 9.3 11.9 11.6A35.6 35.6 0 0 0 311 227c5.3 0 10-.9 14-2.7l-.9-2.3a20.1 20.1 0 0 1-18.7-2.3c-3.6-2.5-8.3-7.1-13.8-14a47.6 47.6 0 0 0-5.4-6.1c10.6-2 19.3-7.2 26-15.4a42.8 42.8 0 0 0 10.2-28 42 42 0 0 0-13.2-31.4 44.8 44.8 0 0 0-32.4-12.9Zm51.4 0 .1 2.7c5.5 0 8.6 1.7 9.3 5 .3 1.1.4 3.3.4 6.4v59.6c0 4.5-.7 7.3-2 8.6-1.1 1.2-3.2 2-6.2 2.3l-.1 2.6h55.1l1.4-13.5h-2.5c-.7 3.7-2.3 6.3-5 7.8a30.5 30.5 0 0 1-14 2.3h-5.2c-6 0-9.5-2.2-10.5-6.6-.2-.9-.2-1.8-.2-2.8l.2-60.3c0-4.4.5-7.4 1.7-8.9 1.2-1.4 3.3-2.3 6.4-2.5l-.2-2.7h-28.7Zm-50.6 3.3a28 28 0 0 1 23 11.2 48 48 0 0 1 8.8 30.5c0 12.3-3 22.1-8.9 29.5a29 29 0 0 1-23.7 11c-9.5 0-17.2-3.8-23-11.4a47.1 47.1 0 0 1-8.9-29.6c0-12.5 3-22.5 9-30 5.9-7.5 13.8-11.2 23.7-11.2Zm126.9 12.8c-1.3 0-2.4.5-3.1 1.4-.8 1-1 2-.8 3.4a6 6 0 0 0 2.2 3.4c1.1 1 2.4 1.4 3.7 1.4 1.3 0 2.3-.5 3-1.4.7-1 1-2.1.7-3.4-.3-1.4-1-2.5-2-3.4a5.6 5.6 0 0 0-3.7-1.4Zm36.4 9.2c-2.3 8.8-7.3 13.5-14.9 14.3l.1 2.5h8.9l-.2 29.8c0 5.1.2 8.5.5 10.2 1 4.2 3.6 6.3 8.1 6.3 6.6 0 13.4-4 20.6-12l-2.2-1.8c-5.2 5.2-9.7 7.8-13.7 7.8-2.5 0-4-1.4-4.6-4.2l-.2-2.4v-33.7h13.7l-.2-4h-13.4v-12.8H441Zm52.4 11.2c-7.6 0-13.7 3.7-18.5 11a31.3 31.3 0 0 0-4.4 24.4 21 21 0 0 0 6.7 12.2 19 19 0 0 0 12.7 4.3c4.7 0 11.4-1.2 14.1-3.7 2.8-2.4 5.4-6.3 7.8-11.7l-2-2a20.6 20.6 0 0 1-17.1 10.5c-8 0-12.8-4.3-14.6-13l-.5-3.5a46 46 0 0 0 21.4-8c4.8-3.8 9.6-7.9 8.7-12.1a9.9 9.9 0 0 0-3.9-6c-2-1.6-7.4-2.4-10.4-2.4Zm-83 .3-16.3 3.8v2.9l5.7-.7c2.7 0 4.3 1.2 4.8 3.7.2.8.3 2 .4 3.4l-.2 26.8c0 3.7-.5 5.8-1.3 6.5-.8.6-3 1-6.6 1v2.5h25.9v-2.5c-3.7 0-6-.3-7-.9-1-.5-1.8-1.5-2.1-3-.2-1.2-.3-3.1-.4-5.7l.1-37.8h-3Zm78.9 5c1.6 0 3 .6 4.6 1.8a7 7 0 0 1 2.8 4c1.4 7-4.9 12-19 14.7a25 25 0 0 1 2.7-14.1c2.3-4.3 5.3-6.4 8.9-6.4Z"
+              ></path><path
+                d="M157.9 10H17C7.7 10 0 17.7 0 27v155.2c0 9.4 7.7 17.2 17.1 17.2h92.7c-1-46.2 14.7-135.7 48-189.5Z"
+              ></path><path
+                d="M152.8 15H17C10.5 15 5 20.4 5 27V171c30.7-11.8 76.8-22 108.7-21.5a989.7 989.7 0 0 1 39-134.5Z"
+              ></path><path
+                d="M190.7 4.9c-9.6-8.6-21.3-5.2-32.8 5a81.4 81.4 0 0 0-5.1 5c-19.7 21-38 59.7-43.7 89.2a81.5 81.5 0 0 1 5.8 17.7l.8 3.5-.9-2.8a173.8 173.8 0 0 0-.8-2 172 172 0 0 0-6.4-12.1l-3.5 11c4.5 8.2 7.3 22.4 7.3 22.4l-1.4-4.1c-1-2.9-6-11.7-7.2-13.7-2 7.5-2.8 12.6-2.1 13.8 1.4 2.4 2.7 6.5 4 11a257.6 257.6 0 0 1 4.6 25c-.3 8.6-.1 17.6.5 25.7a91 91 0 0 0 4.7 24.8l1.5-.8a111 111 0 0 1-3.9-37c.9-22.5 6-49.5 15.6-77.7 16-42.5 38.4-76.6 58.8-93-18.6 17-43.8 71.4-51.4 91.6a365.7 365.7 0 0 0-18 64c6.2-19 26.4-27.2 26.4-27.2s9.8-12.2 21.4-29.6a210 210 0 0 0-22.1 6l-7.1 3s18.1-11 33.7-16C191 73.8 214.2 25.9 190.7 4.9"
+              ></path></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >SQLite / SQL</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 85 107"><path d="M27.59 91.136c-4.834-4.418-6.246-13.703-4.232-20.429 3.492 4.241 8.33 5.584 13.342 6.343 7.737 1.17 15.336.732 22.523-2.804.822-.405 1.582-.943 2.48-1.489.675 1.957.85 3.932.615 5.943-.573 4.896-3.01 8.678-6.885 11.545-1.55 1.147-3.19 2.172-4.79 3.253-4.917 3.323-6.247 7.22-4.4 12.888.044.139.084.277.183.614-2.51-1.124-4.344-2.76-5.742-4.911-1.475-2.27-2.177-4.78-2.214-7.498-.019-1.322-.019-2.656-.197-3.96-.434-3.178-1.926-4.601-4.737-4.683-2.884-.084-5.166 1.699-5.771 4.507-.046.216-.113.429-.18.68l.004.001Z"/><path d="M0 69.587s14.314-6.973 28.668-6.973L39.49 29.12c.405-1.62 1.588-2.72 2.924-2.72 1.335 0 2.518 1.1 2.924 2.72L56.16 62.614c17 0 28.668 6.973 28.668 6.973S60.514 3.352 60.467 3.219C59.769 1.261 58.591 0 57.003 0H27.827c-1.588 0-2.718 1.261-3.464 3.22C24.311 3.35 0 69.586 0 69.586Z"/></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">Astro</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 85 107"
+              ><path
+                d="M27.59 91.136c-4.834-4.418-6.246-13.703-4.232-20.429 3.492 4.241 8.33 5.584 13.342 6.343 7.737 1.17 15.336.732 22.523-2.804.822-.405 1.582-.943 2.48-1.489.675 1.957.85 3.932.615 5.943-.573 4.896-3.01 8.678-6.885 11.545-1.55 1.147-3.19 2.172-4.79 3.253-4.917 3.323-6.247 7.22-4.4 12.888.044.139.084.277.183.614-2.51-1.124-4.344-2.76-5.742-4.911-1.475-2.27-2.177-4.78-2.214-7.498-.019-1.322-.019-2.656-.197-3.96-.434-3.178-1.926-4.601-4.737-4.683-2.884-.084-5.166 1.699-5.771 4.507-.046.216-.113.429-.18.68l.004.001Z"
+              ></path><path
+                d="M0 69.587s14.314-6.973 28.668-6.973L39.49 29.12c.405-1.62 1.588-2.72 2.924-2.72 1.335 0 2.518 1.1 2.924 2.72L56.16 62.614c17 0 28.668 6.973 28.668 6.973S60.514 3.352 60.467 3.219C59.769 1.261 58.591 0 57.003 0H27.827c-1.588 0-2.718 1.261-3.464 3.22C24.311 3.35 0 69.586 0 69.586Z"
+              ></path></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >Astro</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 569 512"><g fill="currentColor" fill-rule="evenodd"><g transform="translate(-227, -256)" fill="currentColor" fill-rule="nonzero"><g transform="translate(227, 256)"><path d="M285.5,201 C255.400481,201 231,225.400481 231,255.5 C231,285.599519 255.400481,310 285.5,310 C315.599519,310 340,285.599519 340,255.5 C340,225.400481 315.599519,201 285.5,201"/><path d="M568.959856,255.99437 C568.959856,213.207656 529.337802,175.68144 466.251623,150.985214 C467.094645,145.423543 467.85738,139.922107 468.399323,134.521063 C474.621631,73.0415145 459.808523,28.6686204 426.709856,9.5541429 C389.677085,-11.8291748 337.36955,3.69129898 284.479928,46.0162134 C231.590306,3.69129898 179.282771,-11.8291748 142.25,9.5541429 C109.151333,28.6686204 94.3382249,73.0415145 100.560533,134.521063 C101.102476,139.922107 101.845139,145.443621 102.708233,151.02537 C97.4493791,153.033193 92.2908847,155.161486 87.3331099,157.39017 C31.0111824,182.708821 0,217.765415 0,255.99437 C0,298.781084 39.6220545,336.307301 102.708233,361.003527 C101.845139,366.565197 101.102476,372.066633 100.560533,377.467678 C94.3382249,438.947226 109.151333,483.32012 142.25,502.434597 C153.629683,508.887578 166.52439,512.186771 179.603923,511.991836 C210.956328,511.991836 247.567589,495.487529 284.479928,465.972527 C321.372196,495.487529 358.003528,511.991836 389.396077,511.991836 C402.475265,512.183856 415.36922,508.884856 426.75,502.434597 C459.848667,483.32012 474.661775,438.947226 468.439467,377.467678 C467.897524,372.066633 467.134789,366.565197 466.291767,361.003527 C529.377946,336.347457 569,298.761006 569,255.99437 M389.155214,27.1025182 C397.565154,26.899606 405.877839,28.9368502 413.241569,33.0055186 C436.223966,46.2772304 446.540955,82.2775015 441.522965,131.770345 C441.181741,135.143488 440.780302,138.556788 440.298575,141.990165 C414.066922,134.08804 387.205771,128.452154 360.010724,125.144528 C343.525021,103.224055 325.192524,82.7564475 305.214266,63.9661533 C336.586743,39.7116483 366.032313,27.1025182 389.135142,27.1025182 M378.356498,310.205598 C368.204912,327.830733 357.150626,344.919965 345.237759,361.405091 C325.045049,363.479997 304.758818,364.51205 284.459856,364.497299 C264.167589,364.51136 243.888075,363.479308 223.702025,361.405091 C211.820914,344.919381 200.80007,327.83006 190.683646,310.205598 C180.532593,292.629285 171.306974,274.534187 163.044553,255.99437 C171.306974,237.454554 180.532593,219.359455 190.683646,201.783142 C200.784121,184.229367 211.770999,167.201087 223.601665,150.764353 C243.824636,148.63809 264.145559,147.579168 284.479928,147.591877 C304.772146,147.579725 325.051559,148.611772 345.237759,150.68404 C357.109048,167.14607 368.136094,184.201112 378.27621,201.783142 C388.419418,219.363718 397.644825,237.458403 405.915303,255.99437 C397.644825,274.530337 388.419418,292.625022 378.27621,310.205598 M419.724813,290.127366 C426.09516,307.503536 431.324985,325.277083 435.380944,343.334682 C417.779633,348.823635 399.836793,353.149774 381.668372,356.285142 C388.573127,345.871232 395.263781,335.035679 401.740334,323.778483 C408.143291,312.655143 414.144807,301.431411 419.805101,290.207679 M246.363271,390.377981 C258.848032,391.140954 271.593728,391.582675 284.5,391.582675 C297.406272,391.582675 310.232256,391.140954 322.737089,390.377981 C310.880643,404.583418 298.10766,417.997563 284.5,430.534446 C270.921643,417.999548 258.18192,404.585125 246.363271,390.377981 Z M187.311556,356.244986 C169.137286,353.123646 151.187726,348.810918 133.578912,343.334682 C137.618549,325.305649 142.828222,307.559058 149.174827,290.207679 C154.754833,301.431411 160.736278,312.655143 167.239594,323.778483 C173.74291,334.901824 180.467017,345.864539 187.311556,356.285142 M149.174827,221.760984 C142.850954,204.473938 137.654787,186.794745 133.619056,168.834762 C151.18418,163.352378 169.085653,159.013101 187.211197,155.844146 C180.346585,166.224592 173.622478,176.986525 167.139234,188.210257 C160.65599,199.433989 154.734761,210.517173 149.074467,221.760984 M322.616657,121.590681 C310.131896,120.827708 297.3862,120.385987 284.379568,120.385987 C271.479987,120.385987 258.767744,120.787552 246.242839,121.590681 C258.061488,107.383537 270.801211,93.9691137 284.379568,81.4342157 C297.99241,93.9658277 310.765727,107.380324 322.616657,121.590681 Z M401.70019,188.210257 C395.196875,176.939676 388.472767,166.09743 381.527868,155.68352 C399.744224,158.819049 417.734224,163.151949 435.380944,168.654058 C431.331963,186.680673 426.122466,204.426664 419.785029,221.781062 C414.205023,210.55733 408.203506,199.333598 401.720262,188.230335 M127.517179,131.790423 C122.438973,82.3176579 132.816178,46.2973086 155.778503,33.0255968 C163.144699,28.9632474 171.455651,26.9264282 179.864858,27.1225964 C202.967687,27.1225964 232.413257,39.7317265 263.785734,63.9862316 C243.794133,82.7898734 225.448298,103.270812 208.949132,125.204763 C181.761691,128.528025 154.90355,134.14313 128.661281,141.990165 C128.199626,138.556788 127.778115,135.163566 127.456963,131.790423 M98.4529773,182.106474 C101.54406,180.767925 104.695358,179.429376 107.906872,178.090828 C114.220532,204.735668 122.781793,230.7969 133.498624,255.99437 C122.761529,281.241316 114.193296,307.357063 107.8868,334.058539 C56.7434387,313.076786 27.0971497,284.003505 27.0971497,255.99437 C27.0971497,229.450947 53.1907013,202.526037 98.4529773,182.106474 Z M155.778503,478.963143 C132.816178,465.691432 122.438973,429.671082 127.517179,380.198317 C127.838331,376.825174 128.259842,373.431953 128.721497,369.978497 C154.953686,377.878517 181.814655,383.514365 209.009348,386.824134 C225.500295,408.752719 243.832321,429.233234 263.805806,448.042665 C220.069,481.834331 180.105722,492.97775 155.838719,478.963143 M441.502893,380.198317 C446.520883,429.691161 436.203894,465.691432 413.221497,478.963143 C388.974566,493.017906 348.991216,481.834331 305.274481,448.042665 C325.241364,429.232737 343.566681,408.752215 360.050868,386.824134 C387.245915,383.516508 414.107066,377.880622 440.338719,369.978497 C440.820446,373.431953 441.221885,376.825174 441.563109,380.198317 M461.193488,334.018382 C454.869166,307.332523 446.294494,281.231049 435.561592,255.99437 C446.289797,230.744081 454.857778,204.629101 461.173416,177.930202 C512.216417,198.911955 541.942994,227.985236 541.942994,255.99437 C541.942994,284.003505 512.296705,313.076786 461.153344,334.058539"/></g></g></g></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">React</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 569 512"
+              ><g fill="currentColor" fill-rule="evenodd"
+                ><g
+                  transform="translate(-227, -256)"
+                  fill="currentColor"
+                  fill-rule="nonzero"
+                  ><g transform="translate(227, 256)"
+                    ><path
+                      d="M285.5,201 C255.400481,201 231,225.400481 231,255.5 C231,285.599519 255.400481,310 285.5,310 C315.599519,310 340,285.599519 340,255.5 C340,225.400481 315.599519,201 285.5,201"
+                    ></path><path
+                      d="M568.959856,255.99437 C568.959856,213.207656 529.337802,175.68144 466.251623,150.985214 C467.094645,145.423543 467.85738,139.922107 468.399323,134.521063 C474.621631,73.0415145 459.808523,28.6686204 426.709856,9.5541429 C389.677085,-11.8291748 337.36955,3.69129898 284.479928,46.0162134 C231.590306,3.69129898 179.282771,-11.8291748 142.25,9.5541429 C109.151333,28.6686204 94.3382249,73.0415145 100.560533,134.521063 C101.102476,139.922107 101.845139,145.443621 102.708233,151.02537 C97.4493791,153.033193 92.2908847,155.161486 87.3331099,157.39017 C31.0111824,182.708821 0,217.765415 0,255.99437 C0,298.781084 39.6220545,336.307301 102.708233,361.003527 C101.845139,366.565197 101.102476,372.066633 100.560533,377.467678 C94.3382249,438.947226 109.151333,483.32012 142.25,502.434597 C153.629683,508.887578 166.52439,512.186771 179.603923,511.991836 C210.956328,511.991836 247.567589,495.487529 284.479928,465.972527 C321.372196,495.487529 358.003528,511.991836 389.396077,511.991836 C402.475265,512.183856 415.36922,508.884856 426.75,502.434597 C459.848667,483.32012 474.661775,438.947226 468.439467,377.467678 C467.897524,372.066633 467.134789,366.565197 466.291767,361.003527 C529.377946,336.347457 569,298.761006 569,255.99437 M389.155214,27.1025182 C397.565154,26.899606 405.877839,28.9368502 413.241569,33.0055186 C436.223966,46.2772304 446.540955,82.2775015 441.522965,131.770345 C441.181741,135.143488 440.780302,138.556788 440.298575,141.990165 C414.066922,134.08804 387.205771,128.452154 360.010724,125.144528 C343.525021,103.224055 325.192524,82.7564475 305.214266,63.9661533 C336.586743,39.7116483 366.032313,27.1025182 389.135142,27.1025182 M378.356498,310.205598 C368.204912,327.830733 357.150626,344.919965 345.237759,361.405091 C325.045049,363.479997 304.758818,364.51205 284.459856,364.497299 C264.167589,364.51136 243.888075,363.479308 223.702025,361.405091 C211.820914,344.919381 200.80007,327.83006 190.683646,310.205598 C180.532593,292.629285 171.306974,274.534187 163.044553,255.99437 C171.306974,237.454554 180.532593,219.359455 190.683646,201.783142 C200.784121,184.229367 211.770999,167.201087 223.601665,150.764353 C243.824636,148.63809 264.145559,147.579168 284.479928,147.591877 C304.772146,147.579725 325.051559,148.611772 345.237759,150.68404 C357.109048,167.14607 368.136094,184.201112 378.27621,201.783142 C388.419418,219.363718 397.644825,237.458403 405.915303,255.99437 C397.644825,274.530337 388.419418,292.625022 378.27621,310.205598 M419.724813,290.127366 C426.09516,307.503536 431.324985,325.277083 435.380944,343.334682 C417.779633,348.823635 399.836793,353.149774 381.668372,356.285142 C388.573127,345.871232 395.263781,335.035679 401.740334,323.778483 C408.143291,312.655143 414.144807,301.431411 419.805101,290.207679 M246.363271,390.377981 C258.848032,391.140954 271.593728,391.582675 284.5,391.582675 C297.406272,391.582675 310.232256,391.140954 322.737089,390.377981 C310.880643,404.583418 298.10766,417.997563 284.5,430.534446 C270.921643,417.999548 258.18192,404.585125 246.363271,390.377981 Z M187.311556,356.244986 C169.137286,353.123646 151.187726,348.810918 133.578912,343.334682 C137.618549,325.305649 142.828222,307.559058 149.174827,290.207679 C154.754833,301.431411 160.736278,312.655143 167.239594,323.778483 C173.74291,334.901824 180.467017,345.864539 187.311556,356.285142 M149.174827,221.760984 C142.850954,204.473938 137.654787,186.794745 133.619056,168.834762 C151.18418,163.352378 169.085653,159.013101 187.211197,155.844146 C180.346585,166.224592 173.622478,176.986525 167.139234,188.210257 C160.65599,199.433989 154.734761,210.517173 149.074467,221.760984 M322.616657,121.590681 C310.131896,120.827708 297.3862,120.385987 284.379568,120.385987 C271.479987,120.385987 258.767744,120.787552 246.242839,121.590681 C258.061488,107.383537 270.801211,93.9691137 284.379568,81.4342157 C297.99241,93.9658277 310.765727,107.380324 322.616657,121.590681 Z M401.70019,188.210257 C395.196875,176.939676 388.472767,166.09743 381.527868,155.68352 C399.744224,158.819049 417.734224,163.151949 435.380944,168.654058 C431.331963,186.680673 426.122466,204.426664 419.785029,221.781062 C414.205023,210.55733 408.203506,199.333598 401.720262,188.230335 M127.517179,131.790423 C122.438973,82.3176579 132.816178,46.2973086 155.778503,33.0255968 C163.144699,28.9632474 171.455651,26.9264282 179.864858,27.1225964 C202.967687,27.1225964 232.413257,39.7317265 263.785734,63.9862316 C243.794133,82.7898734 225.448298,103.270812 208.949132,125.204763 C181.761691,128.528025 154.90355,134.14313 128.661281,141.990165 C128.199626,138.556788 127.778115,135.163566 127.456963,131.790423 M98.4529773,182.106474 C101.54406,180.767925 104.695358,179.429376 107.906872,178.090828 C114.220532,204.735668 122.781793,230.7969 133.498624,255.99437 C122.761529,281.241316 114.193296,307.357063 107.8868,334.058539 C56.7434387,313.076786 27.0971497,284.003505 27.0971497,255.99437 C27.0971497,229.450947 53.1907013,202.526037 98.4529773,182.106474 Z M155.778503,478.963143 C132.816178,465.691432 122.438973,429.671082 127.517179,380.198317 C127.838331,376.825174 128.259842,373.431953 128.721497,369.978497 C154.953686,377.878517 181.814655,383.514365 209.009348,386.824134 C225.500295,408.752719 243.832321,429.233234 263.805806,448.042665 C220.069,481.834331 180.105722,492.97775 155.838719,478.963143 M441.502893,380.198317 C446.520883,429.691161 436.203894,465.691432 413.221497,478.963143 C388.974566,493.017906 348.991216,481.834331 305.274481,448.042665 C325.241364,429.232737 343.566681,408.752215 360.050868,386.824134 C387.245915,383.516508 414.107066,377.880622 440.338719,369.978497 C440.820446,373.431953 441.221885,376.825174 441.563109,380.198317 M461.193488,334.018382 C454.869166,307.332523 446.294494,281.231049 435.561592,255.99437 C446.289797,230.744081 454.857778,204.629101 461.173416,177.930202 C512.216417,198.911955 541.942994,227.985236 541.942994,255.99437 C541.942994,284.003505 512.296705,313.076786 461.153344,334.058539"
+                    ></path></g
+                  ></g
+                ></g
+              ></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >React</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 54 33"><path d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"/></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">Tailwind CSS</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 54 33"
+              ><path
+                d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+              ></path></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >Tailwind CSS</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 304 182"><path d="m86 66 2 9c0 3 1 5 3 8v2l-1 3-7 4-2 1-3-1-4-5-3-6c-8 9-18 14-29 14-9 0-16-3-20-8-5-4-8-11-8-19s3-15 9-20c6-6 14-8 25-8a79 79 0 0 1 22 3v-7c0-8-2-13-5-16-3-4-8-5-16-5l-11 1a80 80 0 0 0-14 5h-2c-1 0-2-1-2-3v-5l1-3c0-1 1-2 3-2l12-5 16-2c12 0 20 3 26 8 5 6 8 14 8 25v32zM46 82l10-2c4-1 7-4 10-7l3-6 1-9v-4a84 84 0 0 0-19-2c-6 0-11 1-15 4-3 2-4 6-4 11s1 8 3 11c3 2 6 4 11 4zm80 10-4-1-2-3-23-78-1-4 2-2h10l4 1 2 4 17 66 15-66 2-4 4-1h8l4 1 2 4 16 67 17-67 2-4 4-1h9c2 0 3 1 3 2v2l-1 2-24 78-2 4-4 1h-9l-4-1-1-4-16-65-15 64-2 4-4 1h-9zm129 3a66 66 0 0 1-27-6l-3-3-1-2v-5c0-2 1-3 2-3h2l3 1a54 54 0 0 0 23 5c6 0 11-2 14-4 4-2 5-5 5-9l-2-7-10-5-15-5c-7-2-13-6-16-10a24 24 0 0 1 5-34l10-5a44 44 0 0 1 20-2 110 110 0 0 1 12 3l4 2 3 2 1 4v4c0 3-1 4-2 4l-4-2c-6-2-12-3-19-3-6 0-11 0-14 2s-4 5-4 9c0 3 1 5 3 7s5 4 11 6l14 4c7 3 12 6 15 10s5 9 5 14l-3 12-7 8c-3 3-7 5-11 6l-14 2z"/><path d="M274 144A220 220 0 0 1 4 124c-4-3-1-6 2-4a300 300 0 0 0 263 16c5-2 10 4 5 8z"/><path d="M287 128c-4-5-28-3-38-1-4 0-4-3-1-5 19-13 50-9 53-5 4 5-1 36-18 51-3 2-6 1-5-2 5-10 13-33 9-38z"/></svg>
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">AWS</span>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 304 182"
+              ><path
+                d="m86 66 2 9c0 3 1 5 3 8v2l-1 3-7 4-2 1-3-1-4-5-3-6c-8 9-18 14-29 14-9 0-16-3-20-8-5-4-8-11-8-19s3-15 9-20c6-6 14-8 25-8a79 79 0 0 1 22 3v-7c0-8-2-13-5-16-3-4-8-5-16-5l-11 1a80 80 0 0 0-14 5h-2c-1 0-2-1-2-3v-5l1-3c0-1 1-2 3-2l12-5 16-2c12 0 20 3 26 8 5 6 8 14 8 25v32zM46 82l10-2c4-1 7-4 10-7l3-6 1-9v-4a84 84 0 0 0-19-2c-6 0-11 1-15 4-3 2-4 6-4 11s1 8 3 11c3 2 6 4 11 4zm80 10-4-1-2-3-23-78-1-4 2-2h10l4 1 2 4 17 66 15-66 2-4 4-1h8l4 1 2 4 16 67 17-67 2-4 4-1h9c2 0 3 1 3 2v2l-1 2-24 78-2 4-4 1h-9l-4-1-1-4-16-65-15 64-2 4-4 1h-9zm129 3a66 66 0 0 1-27-6l-3-3-1-2v-5c0-2 1-3 2-3h2l3 1a54 54 0 0 0 23 5c6 0 11-2 14-4 4-2 5-5 5-9l-2-7-10-5-15-5c-7-2-13-6-16-10a24 24 0 0 1 5-34l10-5a44 44 0 0 1 20-2 110 110 0 0 1 12 3l4 2 3 2 1 4v4c0 3-1 4-2 4l-4-2c-6-2-12-3-19-3-6 0-11 0-14 2s-4 5-4 9c0 3 1 5 3 7s5 4 11 6l14 4c7 3 12 6 15 10s5 9 5 14l-3 12-7 8c-3 3-7 5-11 6l-14 2z"
+              ></path><path
+                d="M274 144A220 220 0 0 1 4 124c-4-3-1-6 2-4a300 300 0 0 0 263 16c5-2 10 4 5 8z"
+              ></path><path
+                d="M287 128c-4-5-28-3-38-1-4 0-4-3-1-5 19-13 50-9 53-5 4 5-1 36-18 51-3 2-6 1-5-2 5-10 13-33 9-38z"
+              ></path></svg
+            >
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >AWS</span
+            >
           </div>
 
-          <div class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group">
-            
-            <svg class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 1024 1024">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)"/>
+          <div
+            class="border border-green-500/20 bg-gray-900/40 p-6 flex flex-col items-center justify-center gap-3 hover:border-green-400 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-default group"
+          >
+            <svg
+              class="w-12 h-12 text-gray-600 group-hover:text-green-400 transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 1024 1024"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+                transform="scale(64)"></path>
             </svg>
-            
-            <span class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors">Git & GitHub</span>
+
+            <span
+              class="font-mono text-sm text-gray-400 group-hover:text-white transition-colors"
+              >Git & GitHub</span
+            >
           </div>
 
-          <div class="col-span-1 sm:col-span-2 lg:col-span-4 border border-green-500/40 bg-gradient-to-r from-green-900/20 to-black p-6 flex flex-row items-center justify-between gap-4 hover:border-green-400 hover:shadow-[0_0_20px_rgba(74,222,128,0.4)] transition-all duration-300 cursor-default group mt-2">
+          <div
+            class="col-span-1 sm:col-span-2 lg:col-span-4 border border-green-500/40 bg-gradient-to-r from-green-900/20 to-black p-6 flex flex-row items-center justify-between gap-4 hover:border-green-400 hover:shadow-[0_0_20px_rgba(74,222,128,0.4)] transition-all duration-300 cursor-default group mt-2"
+          >
             <div class="flex flex-col">
-              <span class="text-xs font-bold text-green-500 tracking-widest uppercase mb-1">Especialidad de Alto Rendimiento</span>
-              <h4 class="text-2xl font-bold text-white group-hover:text-green-300 transition-colors">Data Engineering con Polars</h4>
-              <p class="text-sm text-gray-400 mt-2 max-w-2xl">
-				Ingeniería de datos enfocada en la velocidad. Experto en refactorización de pipelines de datos para maximizar el throughput y minimizar el consumo de recursos de hardware. Transformo procesos lentos y pesados en sistemas ágiles y robustos capaces de operar en entornos de alta demanda.
+              <span
+                data-i18n="specTag"
+                class="text-xs font-bold text-green-500 tracking-widest uppercase mb-1"
+              >
+                Especialidad de Alto Rendimiento
+              </span>
+              <h4
+                data-i18n="specTitle"
+                class="text-2xl font-bold text-white group-hover:text-green-300 transition-colors"
+              >
+                Data Engineering con Polars
+              </h4>
+              <p
+                data-i18n="specDesc"
+                class="text-sm text-gray-400 mt-2 max-w-2xl"
+              >
+                Ingeniería de datos enfocada en la velocidad. Experto en
+                refactorización de pipelines de datos para maximizar el
+                throughput y minimizar el consumo de recursos de hardware.
+                Transformo procesos lentos y pesados en sistemas ágiles y
+                robustos capaces de operar en entornos de alta demanda.
               </p>
             </div>
-            
-            <svg class="w-16 h-16 text-gray-600 group-hover:text-green-400 transition-colors duration-300 hidden sm:block" fill="currentColor" viewBox="0 0 181 91"><path d="M1.499 68.093h4.15c.557 0 1.011.453 1.011 1.015v15.415c0 .559-.45 1.014-1.011 1.014h-4.15a1.013 1.013 0 0 1-1.012-1.014V69.108c0-.56.451-1.015 1.012-1.015Zm9.591-20.258h3.248c.808 0 1.46.657 1.46 1.464v18.794c0 .81-.655 1.464-1.46 1.464H11.09c-.807 0-1.46-.657-1.46-1.464V49.3c0-.81.656-1.464 1.46-1.464Zm-.45 24.206h4.15c.557 0 1.01.452 1.01 1.014v16.323c0 .559-.45 1.014-1.01 1.014h-4.15a1.012 1.012 0 0 1-1.012-1.014V73.055c0-.559.45-1.014 1.011-1.014Zm9.143-44.653h4.15c.557 0 1.011.452 1.011 1.014v30.564c0 .56-.45 1.015-1.011 1.015h-4.15a1.012 1.012 0 0 1-1.012-1.015V28.402c0-.559.451-1.014 1.012-1.014Zm0 35.462h4.15c.557 0 1.011.452 1.011 1.014v9.479c0 .559-.45 1.014-1.011 1.014h-4.15a1.013 1.013 0 0 1-1.012-1.014v-9.479c0-.559.451-1.014 1.012-1.014Zm.45 19.231h3.249c.807 0 1.46.657 1.46 1.464v5.378c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-5.378c0-.81.656-1.464 1.46-1.464Zm8.694-69.189h4.15c.557 0 1.01.453 1.01 1.015v21.618c0 .559-.45 1.014-1.01 1.014h-4.15a1.013 1.013 0 0 1-1.012-1.014V13.9c0-.56.451-1.015 1.012-1.015v.006Zm0 26.278h4.152c.558 0 1.009.452 1.009 1.011v29.303c0 .559-.45 1.011-1.009 1.011h-4.152a1.01 1.01 0 0 1-1.009-1.011V40.18c0-.56.451-1.011 1.009-1.011ZM38.07 8.43h4.15c.558 0 1.011.453 1.011 1.015v14.416c0 .559-.45 1.014-1.01 1.014h-4.15a1.012 1.012 0 0 1-1.012-1.014V9.442c0-.558.45-1.014 1.011-1.014v.003Zm0 18.978h4.15c.558 0 1.011.452 1.011 1.015v20.74c0 .56-.45 1.015-1.01 1.015h-4.15a1.012 1.012 0 0 1-1.012-1.015v-20.74c0-.56.45-1.015 1.011-1.015Zm0 25.755h4.15c.558 0 1.011.452 1.011 1.014v18.636c0 .56-.45 1.014-1.01 1.014h-4.15a1.012 1.012 0 0 1-1.012-1.014V54.178c0-.559.45-1.014 1.011-1.014Zm9.588-48.35h3.249c.807 0 1.46.657 1.46 1.463v27.066c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.656-1.46-1.463V6.277c0-.81.655-1.463 1.46-1.463Zm0 32.984h3.249c.807 0 1.46.657 1.46 1.463v6.283c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-6.282c0-.81.655-1.464 1.46-1.464Zm0 11.3h3.246c.807 0 1.459.656 1.459 1.463v27.97c0 .81-.655 1.463-1.46 1.463h-3.245c-.807 0-1.459-.656-1.459-1.463v-27.97c0-.81.655-1.464 1.46-1.464Zm9.144-47.9h3.248c.808 0 1.46.658 1.46 1.465V8.04c0 .81-.655 1.464-1.46 1.464h-3.248c-.807 0-1.46-.657-1.46-1.464V2.666c0-.81.656-1.464 1.46-1.464v-.003Zm0 10.842h3.248c.808 0 1.46.657 1.46 1.464v41.524c0 .81-.655 1.464-1.46 1.464h-3.248c-.807 0-1.46-.657-1.46-1.464V13.507c0-.81.656-1.464 1.46-1.464v-.003Zm0 47.443h3.248c.808 0 1.46.657 1.46 1.463v11.25c0 .81-.655 1.464-1.46 1.464h-3.248c-.807 0-1.46-.657-1.46-1.463v-11.25c0-.81.656-1.464 1.46-1.464Zm0 17.172h3.248c.808 0 1.46.657 1.46 1.463v7.187c0 .81-.655 1.463-1.46 1.463h-3.248c-.807 0-1.46-.656-1.46-1.463v-7.187c0-.81.656-1.463 1.46-1.463Zm9.144-2.261h3.248c.807 0 1.46.657 1.46 1.463V88.92c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463V75.856c0-.81.655-1.463 1.46-1.463Zm0-45.182h3.248c.807 0 1.46.657 1.46 1.463V62.71c0 .81-.656 1.464-1.46 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464V30.675c0-.81.655-1.463 1.46-1.463Zm0-28.468h3.248c.807 0 1.46.657 1.46 1.463v22.547c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.656-1.46-1.463V2.21c0-.81.655-1.463 1.46-1.463V.744Zm9.143 80.427h3.248c.808 0 1.46.657 1.46 1.463v6.283c0 .81-.655 1.463-1.46 1.463H75.09c-.807 0-1.46-.657-1.46-1.463v-6.282c0-.81.656-1.464 1.46-1.464Zm0-79.975h3.248c.808 0 1.46.657 1.46 1.463v38.362c0 .81-.655 1.464-1.46 1.464H75.09c-.807 0-1.46-.657-1.46-1.463V2.662c0-.81.656-1.463 1.46-1.463v-.003Zm0 44.28h3.248c.808 0 1.46.657 1.46 1.464v15.77c0 .809-.655 1.463-1.46 1.463H75.09c-.807 0-1.46-.657-1.46-1.464V46.94c0-.809.656-1.463 1.46-1.463Zm9.138-42.471h3.248c.807 0 1.46.657 1.46 1.463v10.799c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463V4.47c0-.81.656-1.463 1.46-1.463v-.003Zm0 16.716h3.248c.807 0 1.46.657 1.46 1.464v41.524c0 .81-.656 1.464-1.46 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464V21.19c0-.81.656-1.465 1.46-1.465v-.003Zm9.14-15.812h3.248c.808 0 1.46.657 1.46 1.464v23.903c0 .81-.655 1.464-1.46 1.464h-3.248c-.807 0-1.459-.657-1.459-1.464v-23.9c0-.81.655-1.464 1.46-1.464V3.91Zm0 29.822h3.248c.808 0 1.46.657 1.46 1.464v19.84c0 .809-.655 1.463-1.46 1.463h-3.248c-.807 0-1.459-.657-1.459-1.464v-19.84c0-.81.655-1.463 1.46-1.463Zm0 25.752h3.248c.808 0 1.46.657 1.46 1.463v8.993c0 .81-.655 1.463-1.46 1.463h-3.248c-.807 0-1.459-.656-1.459-1.463v-8.993c0-.81.655-1.463 1.46-1.463Zm9.086-54.217h3.248c.807 0 1.459.657 1.459 1.463v37.006c0 .81-.655 1.463-1.459 1.463h-3.248a1.462 1.462 0 0 1-1.459-1.463V6.732c0-.81.655-1.463 1.459-1.463v-.003Zm0 42.924h3.248c.807 0 1.459.657 1.459 1.463v29.324c0 .81-.655 1.463-1.459 1.463h-3.248a1.462 1.462 0 0 1-1.459-1.463V49.653c0-.81.655-1.463 1.459-1.463Zm9.08-44.28h3.248c.807 0 1.459.656 1.459 1.463v15.77c0 .809-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.464V5.376c0-.81.655-1.464 1.46-1.464V3.91Zm0 21.687h3.248c.807 0 1.459.657 1.459 1.464v46.046c0 .81-.655 1.464-1.459 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464V27.064c0-.81.655-1.464 1.46-1.464v-.003Zm0 51.962h3.248c.807 0 1.459.657 1.459 1.464v8.54c0 .81-.655 1.464-1.459 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464v-8.54c0-.81.655-1.464 1.46-1.464Zm9.14-2.71h3.248c.808 0 1.46.657 1.46 1.464v12.606c0 .81-.655 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.463V76.313c0-.81.655-1.464 1.459-1.464Zm0-38.405h3.248c.808 0 1.46.657 1.46 1.464v8.543c0 .81-.655 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.464v-8.543c0-.81.655-1.464 1.459-1.464Zm0-32.984h3.248c.808 0 1.46.657 1.46 1.464V31.99c0 .81-.655 1.463-1.46 1.463h-3.248a1.461 1.461 0 0 1-1.459-1.464V4.924c0-.81.655-1.464 1.459-1.464Zm9.266 2.261h3.248c.807 0 1.459.657 1.459 1.464V41.48c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463V7.185c0-.81.655-1.464 1.46-1.464Zm0 76.36h3.248c.807 0 1.459.657 1.459 1.464v5.378c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-5.378c0-.81.655-1.464 1.46-1.464Zm9.012-73.647h3.248c.808 0 1.46.657 1.46 1.464v8.543c0 .81-.655 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.464V9.898c0-.81.655-1.464 1.459-1.464Zm0 14.456h3.248c.808 0 1.46.657 1.46 1.464v16.221c0 .81-.655 1.464-1.46 1.464h-3.248a1.461 1.461 0 0 1-1.459-1.464V24.354c0-.81.655-1.464 1.459-1.464Zm9.257-12.2h3.248c.807 0 1.459.656 1.459 1.463v5.378c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-5.378c0-.81.655-1.464 1.46-1.464Zm0 10.843h3.248c.807 0 1.459.657 1.459 1.464v4.925c0 .81-.655 1.464-1.459 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464v-4.925c0-.81.655-1.464 1.46-1.464Zm0 10.392h3.248c.807 0 1.459.657 1.459 1.464v8.088c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-8.088c0-.81.655-1.464 1.46-1.464Zm9.14-18.522h3.248c.807 0 1.46.657 1.46 1.463v27.97c0 .81-.656 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.464V14.863c0-.81.655-1.463 1.459-1.463v.003Zm9.083 8.13h3.248c.807 0 1.459.657 1.459 1.464v18.932c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.656-1.46-1.463V22.997c0-.81.655-1.464 1.46-1.464Zm9.012 10.392h3.248c.808 0 1.46.657 1.46 1.464v5.377c0 .81-.655 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.464V33.39c0-.81.655-1.464 1.459-1.464Z"/></svg>
-          </div>
 
+            <svg
+              class="w-16 h-16 text-gray-600 group-hover:text-green-400 transition-colors duration-300 hidden sm:block"
+              fill="currentColor"
+              viewBox="0 0 181 91"
+              ><path
+                d="M1.499 68.093h4.15c.557 0 1.011.453 1.011 1.015v15.415c0 .559-.45 1.014-1.011 1.014h-4.15a1.013 1.013 0 0 1-1.012-1.014V69.108c0-.56.451-1.015 1.012-1.015Zm9.591-20.258h3.248c.808 0 1.46.657 1.46 1.464v18.794c0 .81-.655 1.464-1.46 1.464H11.09c-.807 0-1.46-.657-1.46-1.464V49.3c0-.81.656-1.464 1.46-1.464Zm-.45 24.206h4.15c.557 0 1.01.452 1.01 1.014v16.323c0 .559-.45 1.014-1.01 1.014h-4.15a1.012 1.012 0 0 1-1.012-1.014V73.055c0-.559.45-1.014 1.011-1.014Zm9.143-44.653h4.15c.557 0 1.011.452 1.011 1.014v30.564c0 .56-.45 1.015-1.011 1.015h-4.15a1.012 1.012 0 0 1-1.012-1.015V28.402c0-.559.451-1.014 1.012-1.014Zm0 35.462h4.15c.557 0 1.011.452 1.011 1.014v9.479c0 .559-.45 1.014-1.011 1.014h-4.15a1.013 1.013 0 0 1-1.012-1.014v-9.479c0-.559.451-1.014 1.012-1.014Zm.45 19.231h3.249c.807 0 1.46.657 1.46 1.464v5.378c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-5.378c0-.81.656-1.464 1.46-1.464Zm8.694-69.189h4.15c.557 0 1.01.453 1.01 1.015v21.618c0 .559-.45 1.014-1.01 1.014h-4.15a1.013 1.013 0 0 1-1.012-1.014V13.9c0-.56.451-1.015 1.012-1.015v.006Zm0 26.278h4.152c.558 0 1.009.452 1.009 1.011v29.303c0 .559-.45 1.011-1.009 1.011h-4.152a1.01 1.01 0 0 1-1.009-1.011V40.18c0-.56.451-1.011 1.009-1.011ZM38.07 8.43h4.15c.558 0 1.011.453 1.011 1.015v14.416c0 .559-.45 1.014-1.01 1.014h-4.15a1.012 1.012 0 0 1-1.012-1.014V9.442c0-.558.45-1.014 1.011-1.014v.003Zm0 18.978h4.15c.558 0 1.011.452 1.011 1.015v20.74c0 .56-.45 1.015-1.01 1.015h-4.15a1.012 1.012 0 0 1-1.012-1.015v-20.74c0-.56.45-1.015 1.011-1.015Zm0 25.755h4.15c.558 0 1.011.452 1.011 1.014v18.636c0 .56-.45 1.014-1.01 1.014h-4.15a1.012 1.012 0 0 1-1.012-1.014V54.178c0-.559.45-1.014 1.011-1.014Zm9.588-48.35h3.249c.807 0 1.46.657 1.46 1.463v27.066c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.656-1.46-1.463V6.277c0-.81.655-1.463 1.46-1.463Zm0 32.984h3.249c.807 0 1.46.657 1.46 1.463v6.283c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-6.282c0-.81.655-1.464 1.46-1.464Zm0 11.3h3.246c.807 0 1.459.656 1.459 1.463v27.97c0 .81-.655 1.463-1.46 1.463h-3.245c-.807 0-1.459-.656-1.459-1.463v-27.97c0-.81.655-1.464 1.46-1.464Zm9.144-47.9h3.248c.808 0 1.46.658 1.46 1.465V8.04c0 .81-.655 1.464-1.46 1.464h-3.248c-.807 0-1.46-.657-1.46-1.464V2.666c0-.81.656-1.464 1.46-1.464v-.003Zm0 10.842h3.248c.808 0 1.46.657 1.46 1.464v41.524c0 .81-.655 1.464-1.46 1.464h-3.248c-.807 0-1.46-.657-1.46-1.464V13.507c0-.81.656-1.464 1.46-1.464v-.003Zm0 47.443h3.248c.808 0 1.46.657 1.46 1.463v11.25c0 .81-.655 1.464-1.46 1.464h-3.248c-.807 0-1.46-.657-1.46-1.463v-11.25c0-.81.656-1.464 1.46-1.464Zm0 17.172h3.248c.808 0 1.46.657 1.46 1.463v7.187c0 .81-.655 1.463-1.46 1.463h-3.248c-.807 0-1.46-.656-1.46-1.463v-7.187c0-.81.656-1.463 1.46-1.463Zm9.144-2.261h3.248c.807 0 1.46.657 1.46 1.463V88.92c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463V75.856c0-.81.655-1.463 1.46-1.463Zm0-45.182h3.248c.807 0 1.46.657 1.46 1.463V62.71c0 .81-.656 1.464-1.46 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464V30.675c0-.81.655-1.463 1.46-1.463Zm0-28.468h3.248c.807 0 1.46.657 1.46 1.463v22.547c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.656-1.46-1.463V2.21c0-.81.655-1.463 1.46-1.463V.744Zm9.143 80.427h3.248c.808 0 1.46.657 1.46 1.463v6.283c0 .81-.655 1.463-1.46 1.463H75.09c-.807 0-1.46-.657-1.46-1.463v-6.282c0-.81.656-1.464 1.46-1.464Zm0-79.975h3.248c.808 0 1.46.657 1.46 1.463v38.362c0 .81-.655 1.464-1.46 1.464H75.09c-.807 0-1.46-.657-1.46-1.463V2.662c0-.81.656-1.463 1.46-1.463v-.003Zm0 44.28h3.248c.808 0 1.46.657 1.46 1.464v15.77c0 .809-.655 1.463-1.46 1.463H75.09c-.807 0-1.46-.657-1.46-1.464V46.94c0-.809.656-1.463 1.46-1.463Zm9.138-42.471h3.248c.807 0 1.46.657 1.46 1.463v10.799c0 .81-.656 1.463-1.46 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463V4.47c0-.81.656-1.463 1.46-1.463v-.003Zm0 16.716h3.248c.807 0 1.46.657 1.46 1.464v41.524c0 .81-.656 1.464-1.46 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464V21.19c0-.81.656-1.465 1.46-1.465v-.003Zm9.14-15.812h3.248c.808 0 1.46.657 1.46 1.464v23.903c0 .81-.655 1.464-1.46 1.464h-3.248c-.807 0-1.459-.657-1.459-1.464v-23.9c0-.81.655-1.464 1.46-1.464V3.91Zm0 29.822h3.248c.808 0 1.46.657 1.46 1.464v19.84c0 .809-.655 1.463-1.46 1.463h-3.248c-.807 0-1.459-.657-1.459-1.464v-19.84c0-.81.655-1.463 1.46-1.463Zm0 25.752h3.248c.808 0 1.46.657 1.46 1.463v8.993c0 .81-.655 1.463-1.46 1.463h-3.248c-.807 0-1.459-.656-1.459-1.463v-8.993c0-.81.655-1.463 1.46-1.463Zm9.086-54.217h3.248c.807 0 1.459.657 1.459 1.463v37.006c0 .81-.655 1.463-1.459 1.463h-3.248a1.462 1.462 0 0 1-1.459-1.463V6.732c0-.81.655-1.463 1.459-1.463v-.003Zm0 42.924h3.248c.807 0 1.459.657 1.459 1.463v29.324c0 .81-.655 1.463-1.459 1.463h-3.248a1.462 1.462 0 0 1-1.459-1.463V49.653c0-.81.655-1.463 1.459-1.463Zm9.08-44.28h3.248c.807 0 1.459.656 1.459 1.463v15.77c0 .809-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.464V5.376c0-.81.655-1.464 1.46-1.464V3.91Zm0 21.687h3.248c.807 0 1.459.657 1.459 1.464v46.046c0 .81-.655 1.464-1.459 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464V27.064c0-.81.655-1.464 1.46-1.464v-.003Zm0 51.962h3.248c.807 0 1.459.657 1.459 1.464v8.54c0 .81-.655 1.464-1.459 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464v-8.54c0-.81.655-1.464 1.46-1.464Zm9.14-2.71h3.248c.808 0 1.46.657 1.46 1.464v12.606c0 .81-.655 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.463V76.313c0-.81.655-1.464 1.459-1.464Zm0-38.405h3.248c.808 0 1.46.657 1.46 1.464v8.543c0 .81-.655 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.464v-8.543c0-.81.655-1.464 1.459-1.464Zm0-32.984h3.248c.808 0 1.46.657 1.46 1.464V31.99c0 .81-.655 1.463-1.46 1.463h-3.248a1.461 1.461 0 0 1-1.459-1.464V4.924c0-.81.655-1.464 1.459-1.464Zm9.266 2.261h3.248c.807 0 1.459.657 1.459 1.464V41.48c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463V7.185c0-.81.655-1.464 1.46-1.464Zm0 76.36h3.248c.807 0 1.459.657 1.459 1.464v5.378c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-5.378c0-.81.655-1.464 1.46-1.464Zm9.012-73.647h3.248c.808 0 1.46.657 1.46 1.464v8.543c0 .81-.655 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.464V9.898c0-.81.655-1.464 1.459-1.464Zm0 14.456h3.248c.808 0 1.46.657 1.46 1.464v16.221c0 .81-.655 1.464-1.46 1.464h-3.248a1.461 1.461 0 0 1-1.459-1.464V24.354c0-.81.655-1.464 1.459-1.464Zm9.257-12.2h3.248c.807 0 1.459.656 1.459 1.463v5.378c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-5.378c0-.81.655-1.464 1.46-1.464Zm0 10.843h3.248c.807 0 1.459.657 1.459 1.464v4.925c0 .81-.655 1.464-1.459 1.464h-3.248c-.808 0-1.46-.657-1.46-1.464v-4.925c0-.81.655-1.464 1.46-1.464Zm0 10.392h3.248c.807 0 1.459.657 1.459 1.464v8.088c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.657-1.46-1.463v-8.088c0-.81.655-1.464 1.46-1.464Zm9.14-18.522h3.248c.807 0 1.46.657 1.46 1.463v27.97c0 .81-.656 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.464V14.863c0-.81.655-1.463 1.459-1.463v.003Zm9.083 8.13h3.248c.807 0 1.459.657 1.459 1.464v18.932c0 .81-.655 1.463-1.459 1.463h-3.248c-.808 0-1.46-.656-1.46-1.463V22.997c0-.81.655-1.464 1.46-1.464Zm9.012 10.392h3.248c.808 0 1.46.657 1.46 1.464v5.377c0 .81-.655 1.464-1.46 1.464h-3.248a1.462 1.462 0 0 1-1.459-1.464V33.39c0-.81.655-1.464 1.459-1.464Z"
+              ></path></svg
+            >
+          </div>
         </div>
 
-		<section class="mt-24 mb-10 border border-green-500/30 bg-gray-900/60 p-1 relative overflow-hidden group shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-        <div class="bg-black/50 px-4 py-2 border-b border-green-500/30 flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <div class="w-3 h-3 rounded-full bg-red-500/80 border border-red-500"></div>
-            <div class="w-3 h-3 rounded-full bg-yellow-500/80 border border-yellow-500"></div>
-            <div class="w-3 h-3 rounded-full bg-green-500/80 border border-green-500"></div>
+        <section
+          class="mt-24 mb-10 border border-green-500/30 bg-gray-900/60 p-1 relative overflow-hidden group shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+        >
+          <div
+            class="bg-black/50 px-4 py-2 border-b border-green-500/30 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-2">
+              <div
+                class="w-3 h-3 rounded-full bg-red-500/80 border border-red-500"
+              >
+              </div>
+              <div
+                class="w-3 h-3 rounded-full bg-yellow-500/80 border border-yellow-500"
+              >
+              </div>
+              <div
+                class="w-3 h-3 rounded-full bg-green-500/80 border border-green-500"
+              >
+              </div>
+            </div>
+            <span class="text-xs text-gray-500 font-mono tracking-widest"
+              >/usr/bin/contact_protocol</span
+            >
+            <div class="w-12"></div>
           </div>
-          <span class="text-xs text-gray-500 font-mono tracking-widest">/usr/bin/contact_protocol</span>
-          <div class="w-12"></div> </div>
 
-        <div class="p-6 md:p-8 relative z-10">
-          <p class="text-green-500 font-mono text-sm md:text-base mb-6">
-            <span class="text-blue-400">root@visitor</span>:<span class="text-purple-400">~</span>$ ./initiate_contact.sh --target "Cristopher Meza"
-            <br/>
-            <span class="text-gray-400">> Estableciendo conexión segura... [ OK ]</span>
-            <br/>
-            <span class="text-gray-400">> Ingresando parámetros del mensaje:</span>
+          <div class="p-6 md:p-8 relative z-10">
+            <p class="text-green-500 font-mono text-sm md:text-base mb-6">
+              <span class="text-blue-400">root@visitor</span>:<span
+                class="text-purple-400">~</span
+              >$ ./initiate_contact.sh --target "Cristopher Meza"
+              <br />
+              <span data-i18n="contactEst" class="text-gray-400"
+                >> Estableciendo conexión segura... [ OK ]</span
+              >
+              <br />
+              <span data-i18n="contactParam" class="text-gray-400"
+                >> Ingresando parámetros del mensaje:</span
+              >
+            </p>
+
+            <form id="contact-form" class="flex flex-col gap-4 font-mono mt-4">
+              <div class="flex flex-col md:flex-row gap-4">
+                <div
+                  class="w-full flex items-center bg-black border border-green-500/30 px-3 focus-within:border-green-400 focus-within:shadow-[0_0_10px_rgba(74,222,128,0.2)] transition-all"
+                >
+                  <span data-i18n="contactName" class="text-green-700 mr-2"
+                    >> Nombre:</span
+                  >
+                  <input
+                    type="text"
+                    id="contact-name"
+                    class="w-full bg-transparent py-3 text-green-400 focus:outline-none placeholder-green-900"
+                    placeholder="_"
+                    required
+                  />
+                </div>
+                <div
+                  class="w-full flex items-center bg-black border border-green-500/30 px-3 focus-within:border-green-400 focus-within:shadow-[0_0_10px_rgba(74,222,128,0.2)] transition-all"
+                >
+                  <span class="text-green-700 mr-2">> Email:</span>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    class="w-full bg-transparent py-3 text-green-400 focus:outline-none placeholder-green-900"
+                    placeholder="_"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div
+                class="w-full flex items-start bg-black border border-green-500/30 px-3 py-3 focus-within:border-green-400 focus-within:shadow-[0_0_10px_rgba(74,222,128,0.2)] transition-all"
+              >
+                <span class="text-green-700 mr-2 mt-1">> Msg:</span>
+                <textarea
+                  id="contact-msg"
+                  rows="4"
+                  class="w-full bg-transparent text-green-400 focus:outline-none resize-none placeholder-green-900 mt-1"
+                  placeholder="_"
+                  required></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="mt-4 border border-green-500 px-6 py-3 w-full md:w-max hover:bg-green-500 hover:text-black transition-colors uppercase font-bold tracking-widest cursor-pointer self-end flex items-center justify-center gap-2"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg
+                >
+                <span data-i18n="contactBtn">[ EJECUTAR ENVÍO ]</span>
+              </button>
+            </form>
+          </div>
+        </section>
+      </section>
+
+      <footer
+        class="mt-20 border-t border-green-500/30 pt-8 pb-12 font-mono text-xs md:text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-6 relative"
+      >
+        <div class="flex flex-col gap-2">
+          <p class="text-green-700">
+            > <span class="text-gray-400">sys.stats.get("movilidad");</span>
+          </p>
+          <p data-i18n="statEco" class="pl-4 text-green-500">
+            "Racha continua en Ecobici: > 1 año 🚲"
           </p>
 
-          <form id="contact-form" class="flex flex-col gap-4 font-mono mt-4">
-            <div class="flex flex-col md:flex-row gap-4">
-              <div class="w-full flex items-center bg-black border border-green-500/30 px-3 focus-within:border-green-400 focus-within:shadow-[0_0_10px_rgba(74,222,128,0.2)] transition-all">
-                <span class="text-green-700 mr-2">> Nombre:</span>
-                <input type="text" id="contact-name" class="w-full bg-transparent py-3 text-green-400 focus:outline-none placeholder-green-900" placeholder="_" required />
-              </div>
-              <div class="w-full flex items-center bg-black border border-green-500/30 px-3 focus-within:border-green-400 focus-within:shadow-[0_0_10px_rgba(74,222,128,0.2)] transition-all">
-                <span class="text-green-700 mr-2">> Email:</span>
-                <input type="email" id="contact-email" class="w-full bg-transparent py-3 text-green-400 focus:outline-none placeholder-green-900" placeholder="_" required />
-              </div>
-            </div>
-            
-            <div class="w-full flex items-start bg-black border border-green-500/30 px-3 py-3 focus-within:border-green-400 focus-within:shadow-[0_0_10px_rgba(74,222,128,0.2)] transition-all">
-              <span class="text-green-700 mr-2 mt-1">> Msg:</span>
-              <textarea id="contact-msg" rows="4" class="w-full bg-transparent text-green-400 focus:outline-none resize-none placeholder-green-900 mt-1" placeholder="_" required></textarea>
-            </div>
-
-            <button type="submit" class="mt-4 border border-green-500 px-6 py-3 w-full md:w-max hover:bg-green-500 hover:text-black transition-colors uppercase font-bold tracking-widest cursor-pointer self-end flex items-center justify-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-              [ EJECUTAR ENVÍO ]
-            </button>
-          </form>
-        </div>
-      </section>
-
-      </section>
-
-	  <footer class="mt-20 border-t border-green-500/30 pt-8 pb-12 font-mono text-xs md:text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-6 relative">
-        
-        <div class="flex flex-col gap-2">
-          <p class="text-green-700">> <span class="text-gray-400">sys.stats.get("movilidad");</span></p>
-          <p class="pl-4 text-green-500">"Racha continua en Ecobici: > 1 año 🚲"</p>
-          
-          <p class="text-green-700 mt-2">> <span class="text-gray-400">sys.hardware.status();</span></p>
-          <p class="pl-4 text-green-500">"Proyector Astronauta: EN LÍNEA 🧑‍🚀"</p>
+          <p class="text-green-700 mt-2">
+            > <span class="text-gray-400">sys.hardware.status();</span>
+          </p>
+          <p data-i18n="statAstro" class="pl-4 text-green-500">
+            "Proyector Astronauta: EN LÍNEA 🧑‍🚀"
+          </p>
         </div>
 
         <div class="flex gap-6">
-          <a href="https://github.com/" target="_blank" class="hover:text-green-400 transition-colors">>> GitHub</a>
-          <a href="https://linkedin.com/in/" target="_blank" class="hover:text-green-400 transition-colors">>> LinkedIn</a>
+          <a
+            href="https://github.com/"
+            target="_blank"
+            class="hover:text-green-400 transition-colors">>> GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/"
+            target="_blank"
+            class="hover:text-green-400 transition-colors">>> LinkedIn</a
+          >
         </div>
 
-        <div class="absolute bottom-2 right-2 md:bottom-4 md:right-4 opacity-30 hover:opacity-100 transition-opacity duration-300">
-          <span id="system-dog" class="cursor-pointer text-white text-lg" title="Mascota del Sistema">
+        <div
+          class="absolute bottom-2 right-2 md:bottom-4 md:right-4 opacity-30 hover:opacity-100 transition-opacity duration-300"
+        >
+          <span
+            id="system-dog"
+            class="cursor-pointer text-white text-lg"
+            title="Mascota del Sistema"
+          >
             ૮・ﻌ・ა
           </span>
         </div>
-        
       </footer>
-
     </div>
 
     <script>
-      const bootLogs = [
-        "[ OK ] Booting core system...",
-        "[ OK ] Authenticating user IDEX-4186...",
-        "[ OK ] Access Granted: Cristopher Meza.",
-        "[ OK ] Initializing Polars data engine...",
-        "[ OK ] Mounting SQLite volumes...",
-        "[ OK ] Starting compliance protocol: SONIC_SCIENTIST...",
-        "[ OK ] Loading file management daemon: DOCHUB...",
-        "[ OK ] Verifying Dead Man's Switch... Active.",
-        " ",
-        "System ready. Executing portfolio.sh..."
-      ];
-
-      const terminalScreen = document.getElementById('terminal-screen')!;
-      const terminalContainer = document.getElementById('terminal-container')!;
-      const portfolioContainer = document.getElementById('portfolio-container')!;
-      const cursor = document.getElementById('cursor')!;
-
-      const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-
-      async function runBootSequence() {
-        for (let i = 0; i < bootLogs.length; i++) {
-          const delay = Math.random() * 300 + 50; // Lo hice un poco más rápido para no desesperar al reclutador
-          await sleep(delay);
-          
-          const p = document.createElement('p');
-          p.textContent = bootLogs[i];
-          terminalScreen.appendChild(p);
-        }
-        
-        await sleep(500);
-        cursor.classList.add('hidden');
-        
-        const btn = document.createElement('button');
-        btn.textContent = "> ENTRAR AL SISTEMA";
-        btn.className = "mt-6 border border-green-500 px-6 py-2 w-max hover:bg-green-500 hover:text-black transition-colors uppercase font-bold tracking-widest cursor-pointer";
-        
-        // LA MAGIA DE LA TRANSICIÓN OCURRE AQUÍ
-        btn.addEventListener('click', () => {
-          // 1. Desvanece la terminal
-          terminalContainer.classList.add('opacity-0');
-          
-          // Espera a que termine de desvanecerse (700ms)
-          setTimeout(() => {
-            // 2. Oculta la terminal del flujo (display: none)
-            terminalContainer.classList.add('hidden');
-            
-            // 3. Quita el display:none del portafolio, pero sigue transparente
-            portfolioContainer.classList.remove('hidden');
-            
-            // 4. Pequeña pausa de 50ms para que el navegador reaccione y luego lo desvanece hacia adentro
-            setTimeout(() => {
-              portfolioContainer.classList.remove('opacity-0');
-            }, 50);
-
-          }, 700);
-        });
-
-        terminalScreen.appendChild(btn);
-      }
-
-      runBootSequence();
-
-	  // Lógica de la terminal de contacto
-      const contactForm = document.getElementById('contact-form')!;
-      
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Evita que la página se recargue
-        
-        const name = (document.getElementById('contact-name') as HTMLInputElement).value;
-        const msg = (document.getElementById('contact-msg') as HTMLTextAreaElement).value;
-        
-        // Construimos el enlace para abrir el correo
-        const mailtoLink = `mailto:cristopherleyva9@gmail.com?subject=Contacto desde Portafolio - ${encodeURIComponent(name)}&body=${encodeURIComponent(msg)}`;
-        
-        // Abrimos el cliente de correo
-        window.location.href = mailtoLink;
-      });
-
-	  // Easter Egg: El guardián del sistema
-      const dog = document.getElementById('system-dog');
-      if (dog) {
-        dog.addEventListener('click', () => {
-          // Ladrido en la consola para los devs que inspeccionen el código
-          console.log('%c¡Guau! Sistema protegido y alimentado con Actican.', 'color: #4ade80; font-size: 16px; font-weight: bold;');
-          
-          // Reacción visual temporal
-          const originalText = dog.innerText;
-          dog.innerText = '¡GUAU!';
-          dog.classList.add('text-green-400');
-          
-          setTimeout(() => {
-            dog.innerText = originalText;
-            dog.classList.remove('text-green-400');
-          }, 1000);
-        });
-      }
-
+      import "../scripts/terminal.ts";
     </script>
   </body>
 </html>
