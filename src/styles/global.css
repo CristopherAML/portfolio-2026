@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Efecto de Monitor CRT (Scanlines) */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Crea líneas horizontales sutiles simulando la pantalla antigua */
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+  background-size: 100% 4px;
+  pointer-events: none; /* Para que no interfiera con los clics */
+  z-index: 50; /* Lo mantiene por encima de casi todo, pero es transparente */
+}
+
+/* 2. Efecto Glitch para los textos */
+.glitch-hover:hover {
+  animation: glitch-anim 0.2s linear infinite;
+  color: white; /* Resalta el texto al hacer el glitch */
+}
+
+@keyframes glitch-anim {
+  0% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+  25% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
+  50% { text-shadow: 2px 0 #00ffff, -2px 0 #ff00ff; }
+  75% { text-shadow: -2px 0 #00ffff, 2px 0 #ff00ff; }
+  100% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+}
+
+/* Animación para el botón al ser presionado */
+@keyframes download-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.download-trigger:active {
+  animation: download-pulse 0.2s ease-in-out;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #065f46; /* Verde oscuro (green-900) */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e; /* Verde brillante (green-500) */
+  box-shadow: 0 0 10px #22c55e;
+}
