@@ -12,29 +12,54 @@
   /* Crea líneas horizontales sutiles simulando la pantalla antigua */
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
   background-size: 100% 4px;
-  pointer-events: none; /* Para que no interfiera con los clics */
-  z-index: 50; /* Lo mantiene por encima de casi todo, pero es transparente */
+  pointer-events: none;
+  /* Para que no interfiera con los clics */
+  z-index: 50;
+  /* Lo mantiene por encima de casi todo, pero es transparente */
 }
 
 /* 2. Efecto Glitch para los textos */
 .glitch-hover:hover {
   animation: glitch-anim 0.2s linear infinite;
-  color: white; /* Resalta el texto al hacer el glitch */
+  color: white;
+  /* Resalta el texto al hacer el glitch */
 }
 
 @keyframes glitch-anim {
-  0% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
-  25% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
-  50% { text-shadow: 2px 0 #00ffff, -2px 0 #ff00ff; }
-  75% { text-shadow: -2px 0 #00ffff, 2px 0 #ff00ff; }
-  100% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+  0% {
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+  }
+
+  25% {
+    text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+  }
+
+  50% {
+    text-shadow: 2px 0 #00ffff, -2px 0 #ff00ff;
+  }
+
+  75% {
+    text-shadow: -2px 0 #00ffff, 2px 0 #ff00ff;
+  }
+
+  100% {
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+  }
 }
 
 /* Animación para el botón al ser presionado */
 @keyframes download-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(0.95); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .download-trigger:active {
@@ -42,8 +67,13 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -61,11 +91,187 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #065f46; /* Verde oscuro (green-900) */
+  background: #065f46;
+  /* Verde oscuro (green-900) */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #22c55e; /* Verde brillante (green-500) */
+  background: #22c55e;
+  /* Verde brillante (green-500) */
   box-shadow: 0 0 10px #22c55e;
+}
+
+/* ==========================================
+     EFECTO GLITCH / ESTÁTICA PARA FOTO CIRCULAR
+     ========================================== */
+
+.glitch-image-hover {
+  @apply relative inline-block;
+}
+
+/* Imagen base: se vuelve ligeramente transparente en hover */
+.glitch-image-hover:hover img {
+  opacity: 0.1;
+  transition: opacity 0.1s ease;
+}
+
+/* Capas de glitch (::before y ::after) */
+.glitch-image-hover::before,
+.glitch-image-hover::after {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full rounded-full opacity-0 bg-cover bg-center;
+  background-image: var(--glitch-img);
+  /* Usamos la variable CSS definida en el HTML */
+}
+
+/* Al pasar el cursor, activamos las capas con animaciones de distorsión y color */
+.glitch-image-hover:hover::before,
+.glitch-image-hover:hover::after {
+  @apply opacity-100;
+}
+
+/* Capa 1: Desplazamiento Magenta/Rojo (Stática rápida) */
+.glitch-image-hover:hover::before {
+  @apply animate-glitch-img-1;
+  filter: drop-shadow(-3px 0 #ff00c1) opacity(0.8);
+  @apply mix-blend-screen;
+  /* Mezcla de color ciberpunk */
+}
+
+/* Capa 2: Desplazamiento Cian/Azul (Estática rápida) */
+.glitch-image-hover:hover::after {
+  @apply animate-glitch-img-2;
+  filter: drop-shadow(3px 0 #00fff9) opacity(0.8);
+  @apply mix-blend-screen;
+  /* Mezcla de color ciberpunk */
+}
+
+/* ==========================================
+     DEFINICIÓN DE ANIMACIONES KEYFRAMES
+     ========================================== */
+
+/* Animación Glitch Capa 1 (Magenta) */
+@keyframes glitch-img-1 {
+  0% {
+    clip-path: inset(80% 0 1% 0);
+    transform: translate(-5px, -2px);
+  }
+
+  10% {
+    clip-path: inset(10% 0 80% 0);
+    transform: translate(5px, 2px);
+  }
+
+  20% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(-5px, 0px);
+  }
+
+  30% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(5px, -2px);
+  }
+
+  40% {
+    clip-path: inset(90% 0 5% 0);
+    transform: translate(-5px, 2px);
+  }
+
+  50% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(0px, 0px);
+  }
+
+  60% {
+    clip-path: inset(70% 0 10% 0);
+    transform: translate(5px, -2px);
+  }
+
+  70% {
+    clip-path: inset(30% 0 50% 0);
+    transform: translate(-5px, 2px);
+  }
+
+  80% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(5px, 0px);
+  }
+
+  90% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translate(-5px, -2px);
+  }
+
+  100% {
+    clip-path: inset(80% 0 1% 0);
+    transform: translate(0px, 0px);
+  }
+}
+
+/* Animación Glitch Capa 2 (Cian) */
+@keyframes glitch-img-2 {
+  0% {
+    clip-path: inset(10% 0 80% 0);
+    transform: translate(5px, 2px);
+  }
+
+  10% {
+    clip-path: inset(80% 0 1% 0);
+    transform: translate(-5px, -2px);
+  }
+
+  20% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(5px, 0px);
+  }
+
+  30% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(-5px, 2px);
+  }
+
+  40% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(5px, -2px);
+  }
+
+  50% {
+    clip-path: inset(90% 0 5% 0);
+    transform: translate(0px, 0px);
+  }
+
+  60% {
+    clip-path: inset(30% 0 50% 0);
+    transform: translate(-5px, 2px);
+  }
+
+  70% {
+    clip-path: inset(70% 0 10% 0);
+    transform: translate(5px, -2px);
+  }
+
+  80% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translate(-5px, 0px);
+  }
+
+  90% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(5px, 2px);
+  }
+
+  100% {
+    clip-path: inset(10% 0 80% 0);
+    transform: translate(0px, 0px);
+  }
+}
+
+/* Registramos las animaciones rápidas e infinitas */
+.animate-glitch-img-1 {
+  animation: glitch-img-1 0.3s infinite linear alternate-reverse;
+}
+
+.animate-glitch-img-2 {
+  animation: glitch-img-2 0.3s infinite linear alternate-reverse;
 }
