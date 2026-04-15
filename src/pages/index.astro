@@ -8,6 +8,7 @@ import "../styles/global.css";
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <title>cristopher-aml-dev</title>
+    <meta name="description" content="Portafolio de Cristopher Meza — Ingeniero especializado en backend de alto rendimiento, data engineering con Polars y despliegues en Linux." />
   </head>
 
   <body
@@ -74,9 +75,11 @@ import "../styles/global.css";
             </p>
             <a
               href="/cv_cristopher_meza.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               class="mt-8 inline-flex items-center gap-2 border border-green-500 bg-green-500/10 px-6 py-3 hover:bg-green-500 hover:text-black transition-all duration-300 font-mono text-sm tracking-widest uppercase shadow-[0_0_10px_rgba(74,222,128,0.2)] hover:shadow-[0_0_20px_rgba(74,222,128,0.5)]"
             >
-              <span data-i18n="cvBtn">[ EXTRAE_REGISTRO_CV.pdf ]</span>
+              <span data-i18n="cvBtn">[ EXTRAER_REGISTRO_CV.pdf ]</span>
             </a>
           </div>
 
@@ -103,7 +106,15 @@ import "../styles/global.css";
         <div
           class="inline-block animate-marquee font-mono text-[10px] md:text-xs text-green-500/60 tracking-[0.2em] uppercase"
         >
-          <span data-i18n="ticker"
+          <span data-i18n="ticker" aria-hidden="true"
+            >RENDIMIENTO POLARS: +400% vs PANDAS &nbsp;&nbsp;&nbsp; //
+            &nbsp;&nbsp;&nbsp; > REGISTROS PROCESADOS: +2.5M &nbsp;&nbsp;&nbsp;
+            // &nbsp;&nbsp;&nbsp; > STATUS: SYSTEM_OPTIMIZED &nbsp;&nbsp;&nbsp;
+            // &nbsp;&nbsp;&nbsp; > ARCHITECTURE: DISTRIBUTED &nbsp;&nbsp;&nbsp;
+            // &nbsp;&nbsp;&nbsp; > COMPLIANCE: SONIC_SCIENTIST_ACTIVE
+            &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp; > LOCATION: CDMX_NODE
+            &nbsp;&nbsp;&nbsp; // &nbsp;&nbsp;&nbsp;
+          </span><span data-i18n="ticker"
             >RENDIMIENTO POLARS: +400% vs PANDAS &nbsp;&nbsp;&nbsp; //
             &nbsp;&nbsp;&nbsp; > REGISTROS PROCESADOS: +2.5M &nbsp;&nbsp;&nbsp;
             // &nbsp;&nbsp;&nbsp; > STATUS: SYSTEM_OPTIMIZED &nbsp;&nbsp;&nbsp;
@@ -131,11 +142,12 @@ import "../styles/global.css";
             >
             </div>
             <div class="relative z-10">
-              <h4
-                class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300 transition-colors"
-              >
-                Sonic Scientist
-              </h4>
+              <div class="mb-3">
+                <h4 class="text-green-400 font-bold text-xl group-hover:text-green-300 transition-colors">
+                  Sonic Scientist
+                </h4>
+                <span data-i18n="wipBadge" class="inline-block mt-1 text-[10px] font-mono text-yellow-500/70 border border-yellow-500/30 px-2 py-0.5">[ EN DESARROLLO ]</span>
+              </div>
               <p
                 data-i18n="sonicDesc"
                 class="text-sm text-gray-400 mb-6 line-clamp-3"
@@ -166,11 +178,12 @@ import "../styles/global.css";
           <div
             class="border border-green-500/20 bg-gray-900/40 p-6 hover:border-green-500 hover:bg-green-900/10 transition-all duration-300 group"
           >
-            <h4
-              class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300"
-            >
-              DocHub
-            </h4>
+            <div class="mb-3">
+              <h4 class="text-green-400 font-bold text-xl group-hover:text-green-300">
+                DocHub
+              </h4>
+              <span data-i18n="wipBadge" class="inline-block mt-1 text-[10px] font-mono text-yellow-500/70 border border-yellow-500/30 px-2 py-0.5">[ EN DESARROLLO ]</span>
+            </div>
             <p
               data-i18n="dochubDesc"
               class="text-sm text-gray-400 mb-6 line-clamp-3"
@@ -197,19 +210,20 @@ import "../styles/global.css";
           <div
             class="border border-green-500/20 bg-gray-900/40 p-6 hover:border-green-500 hover:bg-green-900/10 transition-all duration-300 group"
           >
-            <h4
-              class="text-green-400 font-bold text-xl mb-3 group-hover:text-green-300"
-            >
-              Dead Man's Switch
-            </h4>
-            <h3
+            <div class="mb-3">
+              <h4 class="text-green-400 font-bold text-xl group-hover:text-green-300">
+                Dead Man's Switch
+              </h4>
+              <span data-i18n="wipBadge" class="inline-block mt-1 text-[10px] font-mono text-yellow-500/70 border border-yellow-500/30 px-2 py-0.5">[ EN DESARROLLO ]</span>
+            </div>
+            <p
               data-i18n="deadmanDesc"
               class="text-sm text-gray-400 mb-6 line-clamp-3"
             >
               Script de seguridad automatizado a nivel de sistema operativo para
               proteger y gestionar información crítica en caso de ausencias
               prolongadas.
-            </h3>
+            </p>
             <div
               class="flex flex-wrap gap-2 text-xs font-mono text-green-600/80"
             >
@@ -223,6 +237,97 @@ import "../styles/global.css";
                 >Automation</span
               >
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-20">
+        <h3
+          data-i18n="expTitle"
+          class="text-2xl font-bold text-white mb-8 border-b border-green-500/30 pb-4 inline-block pr-10 glitch-hover transition-colors duration-200 cursor-default"
+        >
+          > experiencia_laboral
+        </h3>
+
+        <div class="flex flex-col">
+          <!-- CNBV -->
+          <div class="relative pl-8 border-l border-green-500/20 pb-10 group/job hover:border-green-500/50 transition-colors duration-300">
+            <div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-black border-2 border-green-500 group-hover/job:bg-green-500 transition-colors duration-300"></div>
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
+              <div>
+                <h4 data-i18n="exp1Title" class="text-white font-bold text-base">Administrador de BD y Backend Developer</h4>
+                <p class="text-green-500 text-sm font-mono">CNBV — Comisión Nacional Bancaria y de Valores</p>
+              </div>
+              <span class="text-xs text-gray-500 font-mono whitespace-nowrap border border-green-500/20 px-2 py-0.5 h-max">Mayo 2025 — <span data-i18n="expCurrent">Actualmente</span></span>
+            </div>
+            <ul data-i18n="exp1Bullets" class="text-sm text-gray-400 flex flex-col gap-1.5">
+              <li><span class="text-green-500/50 mr-2">></span>Detección y depuración de inconsistencias en bases de datos críticas para supervisión financiera.</li>
+              <li><span class="text-green-500/50 mr-2">></span>Automatización de procesos y cruce masivo de datos con SQL avanzado y scripts de backend.</li>
+              <li><span class="text-green-500/50 mr-2">></span>Control de versiones de flujos de datos y automatizaciones con Git.</li>
+            </ul>
+          </div>
+
+          <!-- RYR Protection -->
+          <div class="relative pl-8 border-l border-green-500/20 pb-10 group/job hover:border-green-500/50 transition-colors duration-300">
+            <div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-black border-2 border-green-500/50 group-hover/job:bg-green-500 group-hover/job:border-green-500 transition-colors duration-300"></div>
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
+              <div>
+                <h4 data-i18n="exp2Title" class="text-white font-bold text-base">Desarrollador Full Stack (React / Node.js)</h4>
+                <p class="text-green-500 text-sm font-mono">RYR Protection</p>
+              </div>
+              <span class="text-xs text-gray-500 font-mono whitespace-nowrap border border-green-500/20 px-2 py-0.5 h-max">Ene 2025 — May 2025</span>
+            </div>
+            <ul data-i18n="exp2Bullets" class="text-sm text-gray-400 flex flex-col gap-1.5">
+              <li><span class="text-green-500/50 mr-2">></span>Desarrollo y mantenimiento de aplicaciones web corporativas con React y Node.js.</li>
+              <li><span class="text-green-500/50 mr-2">></span>Creación e integración de APIs REST con servicios backend y bases de datos NoSQL (MongoDB).</li>
+              <li><span class="text-green-500/50 mr-2">></span>Implementación de interfaces responsivas y UX/UI adaptadas al cliente.</li>
+            </ul>
+          </div>
+
+          <!-- B-metrix -->
+          <div class="relative pl-8 border-l border-green-500/20 pb-10 group/job hover:border-green-500/50 transition-colors duration-300">
+            <div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-black border-2 border-green-500/50 group-hover/job:bg-green-500 group-hover/job:border-green-500 transition-colors duration-300"></div>
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
+              <div>
+                <h4 data-i18n="exp3Title" class="text-white font-bold text-base">Programador Backend y Analista de Datos</h4>
+                <p class="text-green-500 text-sm font-mono">B-metrix</p>
+              </div>
+              <span class="text-xs text-gray-500 font-mono whitespace-nowrap border border-green-500/20 px-2 py-0.5 h-max">Mar 2024 — Oct 2024</span>
+            </div>
+            <ul data-i18n="exp3Bullets" class="text-sm text-gray-400 flex flex-col gap-1.5">
+              <li><span class="text-green-500/50 mr-2">></span>Diseño y desarrollo de scripts personalizados para automatizar procesos e interactuar con servicios web.</li>
+              <li><span class="text-green-500/50 mr-2">></span>Implementación de soluciones de web scraping para extraer y estructurar datos para análisis.</li>
+            </ul>
+          </div>
+
+          <!-- CaPREPA -->
+          <div class="relative pl-8 border-l border-green-500/20 pb-10 group/job hover:border-green-500/50 transition-colors duration-300">
+            <div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-black border-2 border-green-500/50 group-hover/job:bg-green-500 group-hover/job:border-green-500 transition-colors duration-300"></div>
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
+              <div>
+                <h4 data-i18n="exp4Title" class="text-white font-bold text-base">Becario en Sistemas y Programación</h4>
+                <p class="text-green-500 text-sm font-mono">CaPREPA</p>
+              </div>
+              <span class="text-xs text-gray-500 font-mono whitespace-nowrap border border-green-500/20 px-2 py-0.5 h-max">Sep 2023 — Mar 2024</span>
+            </div>
+            <ul data-i18n="exp4Bullets" class="text-sm text-gray-400 flex flex-col gap-1.5">
+              <li><span class="text-green-500/50 mr-2">></span>Desarrollo y ejecución de scripts para automatizar la extracción de datos y gestión de bases de datos.</li>
+            </ul>
+          </div>
+
+          <!-- Reingeniería -->
+          <div class="relative pl-8 border-l border-green-500/20 pb-0 group/job hover:border-green-500/50 transition-colors duration-300">
+            <div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-black border-2 border-green-500/50 group-hover/job:bg-green-500 group-hover/job:border-green-500 transition-colors duration-300"></div>
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
+              <div>
+                <h4 data-i18n="exp5Title" class="text-white font-bold text-base">Analista de Datos</h4>
+                <p class="text-green-500 text-sm font-mono">Reingeniería de Procesos, Cumplimientos y Consultoría</p>
+              </div>
+              <span class="text-xs text-gray-500 font-mono whitespace-nowrap border border-green-500/20 px-2 py-0.5 h-max">May 2022 — Jun 2023</span>
+            </div>
+            <ul data-i18n="exp5Bullets" class="text-sm text-gray-400 flex flex-col gap-1.5">
+              <li><span class="text-green-500/50 mr-2">></span>Recopilación, procesamiento y visualización de grandes volúmenes de datos para toma de decisiones.</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -620,13 +725,15 @@ import "../styles/global.css";
 
         <div class="flex gap-6">
           <a
-            href="https://github.com/"
+            href="https://github.com/CristopherAML"
             target="_blank"
+            rel="noopener noreferrer"
             class="hover:text-green-400 transition-colors">>> GitHub</a
           >
           <a
-            href="https://linkedin.com/in/"
+            href="https://www.linkedin.com/in/cristopher-leyva/"
             target="_blank"
+            rel="noopener noreferrer"
             class="hover:text-green-400 transition-colors">>> LinkedIn</a
           >
         </div>
